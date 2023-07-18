@@ -1,0 +1,244 @@
+/* Custom Variables */
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+
+/* Reset */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: inherit;
+}
+
+body {
+  margin: 0 auto;
+  font-family: 'red hat display', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--desaturated-blue);
+  background-color: var(--pale-blue);
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1,
+h2 {
+  color: var(--dark-blue);
+}
+
+/* Component */
+.order-summary-wrap {
+  width: 327px;
+  height: 567px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.15);
+}
+
+.hero {
+  width: 327px;
+  height: 160px;
+  flex-shrink: 0;
+  border-radius: 20px 20px 0px 0px;
+  background: #382AE1;
+  background-image: url(../images/illustration-hero.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.order-sum {
+  display: flex;
+  flex-direction: column;
+  width: 327px;
+  height: 176px;
+  align-items: center;
+}
+
+.order-sum h1 {
+  margin: 32px 0 16px 0;
+  font-size: 1.375em;
+  font-weight: 900;
+}
+
+.order-sum p {
+  text-align: center;
+  font-size: 0.9375em;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.subscription {
+  width: 279px;
+  height: 81px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: var(--very-pale-blue);
+  margin: 0 24px;
+  display: flex;
+  align-items: center;
+  padding: 17px 16px 16px 16px;
+  column-gap: 20px;
+}
+
+.subscription .musical {
+  height: 48px;
+  max-width: 48px;
+  flex: 1;
+  flex-shrink: 0;
+}
+
+.subscription .annual-plan {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875em;
+  row-gap: 3px;
+}
+
+.subscription .annual-plan h2 {
+  font-weight: 900;
+}
+
+#change {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  font-size: 0.8125em;
+  font-weight: 700;
+  color: var(--bright-blue);
+  text-decoration-line: underline;
+}
+
+#change:hover {
+  color: #766CF1;
+  transition: 0.5s;
+}
+
+.proceed {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  font-size: 0.9375em;
+  text-align: center;
+}
+
+.proceed :nth-child(1) {
+  border-radius: 11px;
+  background: var(--bright-blue);
+  box-shadow: 0px 20px 20px 0px rgba(56, 42, 225, 0.19);
+  color: #FFF;
+  font-weight: 900;
+  padding: 15px 65px 15px 64px;
+}
+
+.proceed :nth-child(1):hover {
+  background-color: #766CF1;
+  transition: 0.5s;
+}
+
+.proceed :nth-child(2) {
+  margin-top: 24px;
+  font-weight: 900;
+  color: var(--desaturated-blue);
+}
+
+.proceed :nth-child(2):hover {
+  color: var(--dark-blue);
+  transition: 0.5s;
+}
+
+
+
+
+/* Media Queries */
+
+@media (min-width: 900px) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+  }
+
+  .order-summary-wrap {
+    width: 450px;
+    height: 697px;
+  }
+
+  .hero {
+    width: 450px;
+    height: 220px;
+  }
+
+  .order-sum {
+    width: 450px;
+    height: 197px;
+  }
+
+  .order-sum h1 {
+    font-size: 1.75em;
+  }
+
+  .order-sum p {
+    margin: 0 48px;
+    font-size: 1em;
+    line-height: 26px;
+  }
+
+  .subscription {
+    width: 354px;
+    height: 98px;
+    margin: 0 48px;
+    padding: 25px 24px;
+  }
+
+  .subscription .annual-plan {
+    font-size: 1em;
+    row-gap: 6px;
+  }
+
+  #change {
+    font-size: 0.875em;
+  }
+
+  .proceed {
+    padding: 32px 48px;
+  }
+
+  .proceed :nth-child(1) {
+    padding: 15px 102px 15px 102px;
+  }
+
+  .proceed :nth-child(2) {
+    margin-top: 32px;
+  }
+
+}
+
+
+/* Attributes */
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
