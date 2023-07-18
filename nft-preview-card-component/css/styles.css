@@ -1,0 +1,237 @@
+/* Custom Variables */
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue_main-bg: hsl(217, 54%, 11%);
+  --very-dark-blue_card-bg: hsl(216, 50%, 16%);
+  --very-dark-blue_line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+
+/* Reset */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1,
+p {
+  margin: 0;
+  line-height: 1;
+}
+
+html, 
+body {
+  font-size: 16px;
+}
+
+/* Global Styles */
+
+img {
+  max-width: 100%;
+}
+
+body {
+  margin: 0 auto;
+  font-family: 'outfit', sans-serif;
+  font-size: 1.125em;
+  font-weight: 400;
+  background: var(--very-dark-blue_main-bg);
+  color: var(--soft-blue);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* Component */
+.wrapper {
+  max-width: 327px;
+  background: var(--very-dark-blue_card-bg);
+  border-radius: 15px;
+  margin: auto;
+  padding: 24px 25px 24px 24px;
+  flex-shrink: 0;
+  box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.10);
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, min-content);
+}
+
+.nft-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 8px;
+  background: url(../images/image-equilibrium.jpg), lightgray 50% / cover no-repeat;
+  height: 278px;
+  width: 278px;
+  background-size: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.background-hover {
+  background-color: var(--cyan);
+  padding: 120px;
+  opacity: 0;
+}
+
+.background-hover:hover {
+  height: 278px;
+  width: 278px;
+  opacity: 0.503021240234375;
+  border-radius: 8px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 1.222222222222222em;
+  font-weight: 600;
+  margin: 24px 0 12px 0;
+}
+
+h1:hover {
+  color: var(--cyan);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.lh-1 {
+  line-height: 1.444444444444444em;
+  font-weight: 300;
+}
+
+.content-container :nth-child(3) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.content-container :nth-child(3) :nth-child(2),
+.content-container :nth-child(3) :nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+}
+
+.content-container :nth-child(3) :nth-child(2) {
+  justify-content: flex-end;
+}
+
+.content-container :nth-child(3) :nth-child(1) img {
+  height: 18px;
+  width: 11px;
+}
+
+.content-container :nth-child(3) :nth-child(2) img {
+  height: 16px;
+  width: 16px;
+}
+
+.content-container :nth-child(3) :nth-child(2) img,
+.content-container :nth-child(3) :nth-child(1) img {
+  margin: 16px 0;
+}
+
+.content-container :nth-child(3) :nth-child(1) p {
+  font-weight: 600;
+  color: var(--cyan);
+}
+
+.content-container :nth-child(3) :nth-child(2) p,
+.content-container :nth-child(3) :nth-child(1) p {
+  font-size: 0.9375em;
+}
+
+.content-container :nth-child(4) {
+  border-top: 1px solid var(--very-dark-blue_line);
+  display: flex;
+  gap: 16px;
+}
+
+.bg-image {
+  height: 33px;
+  width: 33px;
+  border-radius: 33px;
+  border: 1px solid var(--white, #FFF);
+  background: url(../images/image-avatar.png), lightgray 50% / cover no-repeat;
+  padding: 1px;
+  background-size: 100%;
+  margin-top: 16px;
+}
+
+.creator {
+  display: flex;
+  gap: 5px;
+}
+
+.creator p {
+  align-self: center;
+  margin-top: 16px;
+  font-size: 0.8333333333333333em;
+}
+
+.creator :nth-child(2) {
+  color: var(--white);
+}
+
+.creator :nth-child(2):hover {
+  color: var(--cyan);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media (min-width: 1440px) {
+  .wrapper {
+    max-width: 350px;
+    padding: 24px;
+  }
+
+  h1 {
+    margin: 27px 0 19px 0;
+  }
+
+  .content-container :nth-child(3) :nth-child(2) img,
+  .content-container :nth-child(3) :nth-child(1) img {
+  margin: 24px 0;
+  }
+
+  .content-container :nth-child(3) :nth-child(2) p,
+  .content-container :nth-child(3) :nth-child(1) p {
+    font-size: 1em;
+  }
+
+  .creator p {
+    font-size: 0.8888888888888889em;
+  }
+
+  .nft-container {
+    height: 302px;
+    width: 302px;
+  }
+
+  .background-hover:hover {
+    height: 302px;
+    width: 302px;
+  }
+
+  .bg-image {
+    margin-bottom: 8px;
+  }
+
+
+}
+
+
+/* Attribution */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
