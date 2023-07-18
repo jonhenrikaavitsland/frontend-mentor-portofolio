@@ -1,0 +1,177 @@
+/*
+Table of content:
+
+1. Custom Variables
+2. Global Styles
+3. Profile Card
+4. Attribution
+*/
+
+/*
+===================
+1. Custom Variables
+===================
+*/
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --neutral-dark-gray: hsl(0, 0%, 59%);
+}
+
+
+/*
+================
+2. Global Styles
+================
+*/
+
+/* Reset */
+h1,
+h2,
+p {
+  margin: 0;
+  font-size: inherit;
+  line-height: 1;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0 auto;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background: var(--dark-cyan);
+  color: var(--dark-grayish-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 43vw bottom 40vh, left 44vw top 47vh;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+  font-size: 1.125em;
+  color: var(--very-dark-desaturated-blue);
+}
+
+
+/*
+===============
+3. Profile Card
+===============
+*/
+.wrapper {
+  width: 326px;
+  height: 374px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #FFF;
+  box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.50);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 70px 70px 75px 89px;
+}
+
+.card-bg {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  background-image: url(../images/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  padding: 1px;
+  border-radius: 15px 15px 0 0;
+  z-index: 0;
+}
+
+.profile-bg {
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+  border-radius: 96px;
+  border: 5px solid #FFF;
+  background: url(../images/image-victor.jpg), lightgray 50% / cover no-repeat;
+  z-index: 10;
+  grid-column: 1;
+  grid-row: 2 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.bio {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.bio p {
+  align-self: center;
+  font-size: 0.625em;
+}
+
+.bio section {
+  display: flex;
+  align-items: center;
+  gap: 8.5px;
+  margin: 2px 0 13px 0;
+}
+
+.bio section p {
+  font-size: 1.125em;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: #E8E9EC 1px solid;
+}
+
+.stats p {
+  font-size: 0.625em;
+  margin-top: 9px;
+  letter-spacing: 1.5px;
+}
+
+.stats section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+@media (min-width: 900px) {
+  body {
+    background-position: right 52vw bottom 35vh, left 48vw top 48vh;
+  }
+
+  .wrapper {
+    width: 350px;
+  }
+
+  .bio p {
+    font-size: 0.875em;
+  }
+}
+
+/*
+==============
+4. Attribution
+==============
+*/
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

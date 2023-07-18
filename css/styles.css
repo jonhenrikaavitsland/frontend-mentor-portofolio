@@ -222,6 +222,9 @@ main section img {
 
 h3 {
   margin-block: 10px;
+}
+
+.stretch {
   flex: 1;
 }
 
