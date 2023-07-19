@@ -1,9 +1,211 @@
+/*
+=================
+Table of contents
+=================
+
+1.  Custom Variables
+2.  Global Styles
+3.  Typography
+4.  Component
+5.  @media
+6.  Attributes
+
+*/
 
 
+/*
+====================
+1.  Custom Variables
+====================
+*/
+
+:root {
+/* Primary */
+  --very-dark-blue_main-bg: hsl(233, 47%, 7%);
+  --dark-desaturated-blue_card-bg: hsl(244, 38%, 16%);
+  --soft-violet_accent: hsl(277, 64%, 61%);
+
+/* Neutral */
+  --white_main-heading_stats: hsl(0, 0%, 100%);
+  --slight-transparent-white_main-p: hsla(0, 0%, 100%, 0.75);
+  --slight-transparent-white_stats-heading: hsla(0, 0%, 100%, 0.6);
+}
 
 
+/*
+=================
+2.  Global Styles
+=================
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+body {
+  margin: 0 auto;
+  font-size: 0.9375rem;
+  line-height: 25px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  color: var(--slight-transparent-white_main-p);
+  background-color: var(--very-dark-blue_main-bg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
 
 
+/*
+==============
+3.  Typography
+==============
+*/
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 32px;
+  text-align: center;
+  margin: 40px 31.5px 16px 31.5px;
+}
+
+.stats,
+h1 {
+  color: var(--white_main-heading_stats);
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-align: center;
+  color: var(--slight-transparent-white_stats-heading);
+}
+
+.upcase,
+h2 {
+  text-transform: uppercase;
+}
+
+.stats {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+
+/*
+=============
+4.  Component
+=============
+*/
+
+.stats-preview-card {
+  width: 327px;
+  height: 780px;
+  background-color: var(--dark-desaturated-blue_card-bg);
+  border-radius: 8px;
+  box-shadow: 0px 20px 20px -10px rgba(23, 25, 41, 0.20);
+}
+
+.bg-img {
+  background-image: url(../images/image-header-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-x: left;
+  background-position-y: top;
+  width: 327px;
+  height: 240px;
+  background-color: var(--soft-violet_accent);
+  background-blend-mode: multiply;
+  border-radius: 8px 8px 0 0;
+}
+
+.insight {
+  color: var(--soft-violet_accent);
+}
+
+.stats-preview-card section p {
+  margin: 0 32px 40px 31px;
+  text-align: center;
+}
+
+.stat-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+
+/*
+==========
+5.  @media
+==========
+*/
+
+@media (min-width: 1150px) {
+  .stats-preview-card {
+    display: grid;
+    grid-template-columns: 570px 540px;
+    width: 1110px;
+    height: 446px;
+  }
+
+  .info-wrap {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .bg-img {
+    grid-column: 2 / 3;
+    width: 540px;
+    height: 446px;
+    background-image: url(../images/image-header-desktop.jpg);
+    border-radius: 0 8px 8px 0;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 44px;
+    text-align: start;
+    margin: 71px 95px 25px 72px;
+  }
+
+  .stats-preview-card section p {
+    margin: 0 124.5px 72px 71.5px;
+    text-align: start;
+  }
+
+  .stat-wrap {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    gap: 61.75px;
+    margin-left: 72px;
+  }
+}
+
+
+/*
+==============
+6.  Attributes
+==============
+*/
 
 .attribution { 
   font-size: 11px; text-align: center; 
