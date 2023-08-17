@@ -1,0 +1,114 @@
+/*
+=================
+TABLE OF CONTENTS
+=================
+
+1.  Custom variables
+2.  Global styles
+3.  App
+5.  @media
+6.  Attribution
+
+*/
+
+/*
+====================
+1.  Custom Variables
+====================
+*/
+
+:root {
+  --purple-header: linear-gradient(225deg, #E844FF 0%, #8739FF 100%);
+  --grey-textbox: #EEE5F4;
+  --white-color: #FFF; 
+
+  /* text colors */
+
+  --black-header-text: #3E2753;
+  --grey-paragraph-text: #A39DA9;
+  --left-textbox-text: #9341C8;
+  --right-textbox-text: #6E5D7E;
+  --subheading-mobile: #D99EFF;
+  --placeholder-text: #C5C9CC;
+
+  --app-background: #F5F3F7;
+  --background-color: #FAFAFA;
+}
+
+/*
+=================
+2.  Global Styles
+=================
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a,
+p,
+h1,
+h2 {
+  font-size: inherit;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  background-color: var(--background-color);
+  color: var(--grey-paragraph-text);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  color: var(--black-header-text);
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+
+/*
+======
+3. App
+======
+*/
+
+.mobile-app {
+  width: 247px;
+  height: 505px;
+  border-radius: 30px;
+  background-color: var(--app-background);
+  border: 11px 9.5px solid var(--white-color);
+}
+
+
+/*
+===============
+5.  Attribution
+===============
+*/
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
