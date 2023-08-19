@@ -92,6 +92,10 @@ body {
   font-size: var(--font-size-8);
   background-color: var(--background-color);
   color: var(--left-textbox-text);
+  background-image: url(../images/rectangle-background-left.svg), url(../images/rectangle-background-right.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position-x: left -325px, right -323px;
+  background-position-y: top -550px, bottom -480px;
 }
 
 main {
@@ -125,6 +129,7 @@ h2 {
   color: var(--grey-paragraph-text);
   line-height: var(--line-height-28);
   margin: 0 32px 64px 32px;
+  text-align: center;
 }
 
 /*
@@ -331,9 +336,39 @@ margin: 30px 0 0 8px;
   margin-left: 72.35px;
 }
 
+
+/*
+==========
+5.  @media
+==========
+*/
+
+@media (min-width: 900px) {
+  main {
+    flex-direction: row;
+  }
+
+  h1 {
+    text-align: start;
+    margin: 0 0 0 125px
+  }
+
+  .normal-size {
+    margin: 24px 0 0 125px;
+    max-width: 445px;
+    text-align: start;
+  }
+
+  body {
+    background-position-x: left -140px, right -90px;
+    background-position-y: top -318px, bottom -337px;
+  }
+}
+
+
 /*
 ===============
-5.  Attribution
+6.  Attribution
 ===============
 */
 
