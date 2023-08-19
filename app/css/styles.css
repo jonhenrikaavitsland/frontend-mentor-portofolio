@@ -137,6 +137,17 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.center-top {
+  width: 129px;
+  height: 29px;
+  padding: 1px;
+  border-radius: 0px 0px 14px 14px;
+  background-color: var(--white-color);
+  position: absolute;
+  top: 0px;
 }
 
 .mobile-app-inner {
