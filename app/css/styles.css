@@ -35,6 +35,8 @@ TABLE OF CONTENTS
   --background-color: #FAFAFA;
   --app-background2: rgba(62, 39, 83, 0.05);
 
+  --icon: #3E2753;
+
 /* Typography */
 
   --font-family-rubik: 'Rubik', sans-serif;
@@ -109,6 +111,7 @@ h1 {
   font-weight: var(--font-weight-500);
   font-size: var(--font-size-40);
   text-align: center;
+  margin: 64px 0 24px 0;
 }
 
 h2 {
@@ -120,6 +123,8 @@ h2 {
 .normal-size {
   font-size: var(--font-size-16);
   color: var(--grey-paragraph-text);
+  line-height: var(--line-height-28);
+  margin: 0 32px 64px 32px;
 }
 
 /*
@@ -203,7 +208,7 @@ margin: 30px 0 0 8px;
   height: 34px;
   border-radius: 10px 10px 10px 4px;
   background-color: var(--grey-textbox);
-  margin: 11px 0 14px 7.5px;
+  margin: 11px 0 8px 7.5px;
   display: flex;
   align-items: center;
 }
@@ -300,6 +305,30 @@ margin: 30px 0 0 8px;
 
 #marg {
   margin-left: 50px;
+}
+
+.chat-inp {
+  background-color: var(--white-color);
+  width: 213px;
+  height: 33.9px;
+  border-radius: 16.954px;
+  display: flex;
+  align-items: center;
+  margin: 16px 0 0 7.5px;
+}
+
+.chat-inp p {
+  color: var(--placeholder-text);
+  margin-left: 19.42px;
+  font-size: var(--font-size-9);
+  letter-spacing: var(--letter-spacing);
+  width: 92.233px;
+}
+
+.fa-circle-chevron-right {
+  color: var(--icon);
+  font-size: 25px;
+  margin-left: 72.35px;
 }
 
 /*
