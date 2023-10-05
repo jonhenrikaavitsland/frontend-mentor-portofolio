@@ -168,12 +168,20 @@ h2 {
   text-align: center;
 }
 
+.tw-l-2 p,
+.tw-r-2 p,
+.in-l-2 p,
+.in-pv-2 p,
+.fb-p-2 p,
 .in-3 p,
 .fb-3 p,
 .tw-3 p {
   color: var(--lime-green);
 }
 
+.yt-l-2 p,
+.yt-v-2 p,
+.fb-l-2 p,
 .yt-3 {
   color: var(--bright-red);
 }
@@ -181,6 +189,11 @@ h2 {
 .sc-heading {
   color: var(--de-saturated-blue_text);
 }
+
+
+
+
+
 
 
 /*
