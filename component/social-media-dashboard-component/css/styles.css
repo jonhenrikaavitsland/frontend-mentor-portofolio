@@ -5,7 +5,7 @@
 3.  Typography
 4.  Colors
 5.  Dashboard
-4.  @media
+6.  @media
 
 */
 
@@ -72,11 +72,16 @@ body {
   font-weight: 700;
   background-color: var(--very-dark-blue_bg);
   color: var(--de-saturated-blue_text);
-  min-height: 100vh;
+  
 }
 
 img {
   max-width: 100%;
+}
+
+main {
+  min-height: 100vh;
+  flex: 1;
 }
 
 .attribution { font-size: 11px; text-align: center; }
@@ -362,3 +367,70 @@ h2 {
   gap: 2px;
 }
 
+
+/* @media */
+
+@media (min-width: 1000px) {
+  main,
+  .dashboard-container,
+  .top-wrap {
+    display: flex;
+  }
+
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .dashboard-container {
+    max-width: 1440px;
+  }
+
+  main {
+    justify-content: center;
+    align-items: center;
+
+  .top-wrap {
+    justify-content: space-between;
+    height: 244px;
+  }
+
+  .top-wrap div {
+    gap: 13px;
+    align-items: center;
+    height: 50px;
+    padding-top: 0;
+  }
+
+  .overview-container,
+  .social-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 24px;
+  }
+
+  .overview-container h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 24px;
+  }
+
+  .fb-pageviews {
+    margin: 0;
+  }
+
+  .dashboard-wrap {
+    top: -145px;
+    margin: 0 auto;
+  }
+
+  .top-wrap section {
+    border-bottom: none
+  }
+
+  .overview-container section,
+  .social-container section {
+    max-width: 255px;
+  }
+
+
+}
