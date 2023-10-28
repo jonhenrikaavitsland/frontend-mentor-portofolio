@@ -8,6 +8,7 @@
 6.  Margin
 7.  Padding
 8.  Layout
+9.  Grid
 
 */
 
@@ -122,6 +123,8 @@ nav a {
   background-color: var(--black-modal);
 }
 
+.swap-btn-left,
+.swap-btn-right,
 .mobile-nav {
   background-color: var(--white-100);
 }
@@ -152,6 +155,9 @@ nav li {
 /* 
 5.  Flex
 */
+main,
+.swap-btn-left,
+.swap-btn-right,
 .right-nav,
 .left-nav,
 .mobile-nav ul,
@@ -161,6 +167,7 @@ header  {
   display: flex;
 }
 
+main,
 .mobile-nav ul,
 .mobile-nav  {
   flex-direction: column;
@@ -211,9 +218,22 @@ ul {
 /* 
 8.  Layout
 */
+
+.product-image,
+.swap-btn-left,
+.swap-btn-right,
 .overlay,
 .mobile-nav {
   position: absolute;
+}
+
+.swap-btn-left,
+.swap-btn-right {
+  z-index: 8;
+}
+
+.overlay {
+  z-index: 9;
 }
 
 .mobile-nav {
@@ -240,6 +260,8 @@ nav ul {
   gap: 32px;
 }
 
+.swap-btn-left,
+.swap-btn-right,
 .right-nav,
 .left-nav {
   align-items: center;
@@ -247,6 +269,16 @@ nav ul {
 
 .right-nav {
   justify-content: flex-end;
+}
+
+.swap-btn-left,
+.swap-btn-right {
+  justify-content: center;
+}
+
+.swap-btn-left img,
+.swap-btn-right img {
+  height: 12px;
 }
 
 .mobile-nav {
@@ -282,6 +314,49 @@ nav ul {
   border-radius: var(--radius-24);
 } 
 
+.swap-btn-left,
+.swap-btn-right {
+  border-radius: var(--radius-50);
+}
+
+.swap-btn-left,
+.swap-btn-right {
+  top: 130px;
+  height: 40px;
+  width: 40px;
+}
+
+.swap-btn-right {
+  right: 16px;
+}
+
+.swap-btn-left {
+  left: 16px;
+}
+
+.product-image {
+  bottom: -38px;
+}
 
 
+/* 
+9.  Grid
+*/
+
+.product-img-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  grid-column: 1 / -1;
+
+}
+
+.swap-btn-right {
+  grid-column: 2 / -1;
+}
 

@@ -11,3 +11,4 @@ openMenu.addEventListener("click", menuOpen);
 btnCloseMenu.addEventListener("click", closeMenu);
 overlay.addEventListener("click", closeMenu);
 document.addEventListener("keydown", closeEsc);
+
