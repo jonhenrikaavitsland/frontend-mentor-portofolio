@@ -1,0 +1,287 @@
+/* Table of contents
+
+1.  Custom Variables
+2.  Global Styles
+3.  Colors
+4.  Typography
+5.  Flex
+6.  Margin
+7.  Padding
+8.  Layout
+
+*/
+
+
+/* 
+1.  Custom Variables
+*/
+
+:root {
+
+  /* Primary Colors: */
+  --orange: #FF7E1B;
+  --pale-orange: #FFEEE2;
+  --box-shadow-orange: 0px 20px 50px -20px #FF7E1B;
+
+  /* Neutral Colors: */
+  --very-dark-blue: #1D2026;
+  --dark-grayish-blue: #69707D;
+  --light-grayish-blue: #B6BCC8;
+  --grayish-blue: #F6F8FD; /* not for text */
+  --white-100: #fff;
+  --black-modal: #00000075; /* 75% opacity for modal */
+
+  /* Typography */
+  --font-kumbh: 'Kumbh Sans', sans-serif;
+  --weight-4: 400;
+  --weight-7: 700;
+  --size-12: 0,75rem;
+  --size-13: 0.8125rem;
+  --size-15: 0.9375rem;
+  --size-16: 1rem;
+  --size-18: 1.125rem;
+  --size-28: 1.75rem;
+  --size-44: 2.75rem;
+  --height-25: 1.5625rem;
+  --height-26: 1.625rem;
+  --height-32: 2rem;
+  --height-48: 3rem;
+  --spacing-18: 1.846px;
+  --spacing-20: 2px;
+
+  /* Styling */
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-6-5: 6.5px;
+  --radius-10: 10px;
+  --radius-15: 15px;
+  --radius-24: 24px;
+  --radius-50: 50px;
+}
+
+
+/* 
+2.  Global Styles
+*/
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mobile-nav ul {
+  list-style: none;
+}
+
+body {
+  background-color: var(--white-100);
+  color: var(--dark-grayish-blue);
+  font-family: var(--font-kumbh);
+  font-size: var(--size-16);
+  font-weight: var(--weight-4);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* 
+3.  Colors
+*/
+
+.mobile-nav  a {
+  color: var(--very-dark-blue);
+}
+
+nav a {
+  color: var(--dark-grayish-blue);
+}
+
+.overlay {
+  background-color: var(--black-modal);
+}
+
+.mobile-nav {
+  background-color: var(--white-100);
+}
+
+
+/* 
+4.  Typography
+*/
+
+
+.mobile-nav li {
+  font-weight: var(--weight-7);
+}
+
+nav li,
+.mobile-nav li {
+  line-height: var(--height-26);
+}
+
+.mobile-nav li {
+  font-size: var(--size-18);
+}
+
+nav li {
+  font-size: var(--size-15);
+}
+
+/* 
+5.  Flex
+*/
+.right-nav,
+.left-nav,
+.mobile-nav ul,
+nav ul, 
+.mobile-nav,
+header  {
+  display: flex;
+}
+
+.mobile-nav ul,
+.mobile-nav  {
+  flex-direction: column;
+}
+
+.right-nav,
+main {
+  flex: 1;
+}
+
+.left-nav {
+  flex: 2;
+}
+
+
+/* 
+6.  Margin
+*/
+
+.mobile-nav ul {
+  margin: 54px 0 0 0;
+}
+
+nav ul {
+  margin-left: 56px;
+}
+
+.menu {
+  margin-right: 16px;
+}
+
+
+/* 
+7.  Padding
+*/
+header {
+  padding: 20px 24px 28px 24px;
+}
+
+.mobile-nav {
+  padding: 25px 0 0 25px;
+}
+
+ul {
+  padding: 0;
+}
+
+/* 
+8.  Layout
+*/
+.overlay,
+.mobile-nav {
+  position: absolute;
+}
+
+.mobile-nav {
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+.mobile-nav ul {
+  gap: 20px;
+}
+
+.right-nav {
+  gap: 22px;
+}
+
+nav ul {
+  gap: 32px;
+}
+
+.right-nav,
+.left-nav {
+  align-items: center;
+}
+
+.right-nav {
+  justify-content: flex-end;
+}
+
+.mobile-nav {
+  min-height: 100vh;
+  width: 250px;
+}
+
+.menu-close {
+  width: 13px;
+}
+
+.menu {
+  height: 15px;
+}
+
+.cart-icon,
+.logo {
+  height: 20px;
+}
+
+.profile-pic {
+  height: 24px;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cart-icon {
+  border-radius: var(--radius-24);
+} 
+
+
+
+
