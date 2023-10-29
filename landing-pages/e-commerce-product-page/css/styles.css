@@ -111,6 +111,8 @@ img {
 3.  Colors
 */
 
+.discounted-price,
+h2,
 .mobile-nav  a {
   color: var(--very-dark-blue);
 }
@@ -119,8 +121,13 @@ nav a {
   color: var(--dark-grayish-blue);
 }
 
+.cutoff,
 h1 {
   color: var(--orange);
+}
+
+.before-price {
+  color: var(--light-grayish-blue);
 }
 
 .overlay {
@@ -133,25 +140,44 @@ h1 {
   background-color: var(--white-100);
 }
 
+.discount-cover {
+  background-color: var(--pale-orange);
+}
+
 
 /* 
 4.  Typography
 */
 
+.cutoff,
+.discounted-price,
+.before-price,
 h1,
+h2,
 .mobile-nav li {
   font-weight: var(--weight-7);
 }
 
+p {
+  line-height: var(--height-25);
+}
+
+.before-price,
 nav li,
 .mobile-nav li {
   line-height: var(--height-26);
+}
+
+h2,
+.discounted-price {
+  font-size: var(--size-28);
 }
 
 .mobile-nav li {
   font-size: var(--size-18);
 }
 
+p,
 nav li {
   font-size: var(--size-15);
 }
@@ -162,10 +188,22 @@ h1 {
   letter-spacing: var(--spacing-18);
 }
 
+h2 {
+  line-height: var(--height-32);
+}
+
+.before-price {
+  text-decoration-line: line-through;
+}
+
 
 /* 
 5.  Flex
 */
+.discount-cover,
+.discount-wrap,
+.before-price,
+.price-container,
 main,
 .swap-btn-left,
 .swap-btn-right,
@@ -184,6 +222,8 @@ main,
   flex-direction: column;
 }
 
+.discount-wrap,
+.before-price,
 .right-nav,
 main {
   flex: 1;
@@ -210,8 +250,16 @@ nav ul {
   margin-right: 16px;
 }
 
+h2 {
+  margin-bottom: 15px;
+}
+
 h1 {
   margin-bottom: 19px;
+}
+
+p {
+  margin-bottom: 24px;
 }
 
 
@@ -266,6 +314,10 @@ nav ul li {
   display: inline-block;
 }
 
+.discount-wrap {
+  gap: 16px;
+}
+
 .mobile-nav ul {
   gap: 20px;
 }
@@ -278,6 +330,9 @@ nav ul {
   gap: 32px;
 }
 
+.discount-cover,
+.discount-wrap,
+.price-container,
 .swap-btn-left,
 .swap-btn-right,
 .right-nav,
@@ -285,10 +340,12 @@ nav ul {
   align-items: center;
 }
 
+.before-price,
 .right-nav {
   justify-content: flex-end;
 }
 
+.discount-cover,
 .swap-btn-left,
 .swap-btn-right {
   justify-content: center;
@@ -326,6 +383,15 @@ nav ul {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.discount-cover {
+  width: 51px;
+  height: 27px;
+}
+
+.discount-cover {
+  border-radius: var(--radius-6);
 }
 
 .cart-icon {
