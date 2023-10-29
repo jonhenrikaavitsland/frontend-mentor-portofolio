@@ -111,6 +111,7 @@ img {
 3.  Colors
 */
 
+.amount-2,
 .discounted-price,
 h2,
 .mobile-nav  a {
@@ -130,6 +131,10 @@ h1 {
   color: var(--light-grayish-blue);
 }
 
+.cta {
+  color: var(--white-100);
+}
+
 .overlay {
   background-color: var(--black-modal);
 }
@@ -144,11 +149,25 @@ h1 {
   background-color: var(--pale-orange);
 }
 
+.amount-container {
+  background-color: var(--grayish-blue);
+}
+
+.cta {
+  background-color: var(--orange);
+  box-shadow: var(--box-shadow-orange);
+}
+
+.amount-2 {
+  text-align: center;
+}
 
 /* 
 4.  Typography
 */
 
+.cta,
+.amount-2,
 .cutoff,
 .discounted-price,
 .before-price,
@@ -200,6 +219,13 @@ h2 {
 /* 
 5.  Flex
 */
+
+.cta,
+.amount-1,
+.amount-2,
+.amount-3,
+.amount-container,
+.button-container,
 .discount-cover,
 .discount-wrap,
 .before-price,
@@ -216,12 +242,15 @@ header  {
   display: flex;
 }
 
+.button-container,
 main,
 .mobile-nav ul,
 .mobile-nav  {
   flex-direction: column;
 }
 
+.amount-1,
+.amount-3,
 .discount-wrap,
 .before-price,
 .right-nav,
@@ -229,6 +258,7 @@ main {
   flex: 1;
 }
 
+.amount-2,
 .left-nav {
   flex: 2;
 }
@@ -258,6 +288,7 @@ h1 {
   margin-bottom: 19px;
 }
 
+.price-container,
 p {
   margin-bottom: 24px;
 }
@@ -280,6 +311,10 @@ ul {
 
 .product-info-container {
   padding: 24px;
+}
+
+main {
+  padding-bottom: 50px;
 }
 
 /* 
@@ -314,6 +349,8 @@ nav ul li {
   display: inline-block;
 }
 
+.cta,
+.button-container,
 .discount-wrap {
   gap: 16px;
 }
@@ -330,6 +367,8 @@ nav ul {
   gap: 32px;
 }
 
+.cta,
+.amount-container,
 .discount-cover,
 .discount-wrap,
 .price-container,
@@ -345,6 +384,10 @@ nav ul {
   justify-content: flex-end;
 }
 
+.cta,
+.amount-1,
+.amount-2,
+.amount-3,
 .discount-cover,
 .swap-btn-left,
 .swap-btn-right {
@@ -369,6 +412,10 @@ nav ul {
   height: 15px;
 }
 
+.cta img {
+  height: 16px;
+}
+
 .cart-icon,
 .logo {
   height: 20px;
@@ -390,8 +437,19 @@ nav ul {
   height: 27px;
 }
 
+.cta,
+.amount-container {
+  height: 56px;
+  width: 327px;
+}
+
 .discount-cover {
   border-radius: var(--radius-6);
+}
+
+.cta,
+.amount-container {
+  border-radius: var(--radius-10);
 }
 
 .cart-icon {
@@ -416,6 +474,10 @@ nav ul {
 
 .swap-btn-left {
   left: 16px;
+}
+
+.cta {
+  border: none;
 }
 
 
