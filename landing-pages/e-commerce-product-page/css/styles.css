@@ -36,6 +36,7 @@
   --font-kumbh: 'Kumbh Sans', sans-serif;
   --weight-4: 400;
   --weight-7: 700;
+  --size-10: 0.625rem;
   --size-12: 0.75rem;
   --size-13: 0.8125rem;
   --size-15: 0.9375rem;
@@ -133,6 +134,7 @@ h1 {
   color: var(--light-grayish-blue);
 }
 
+.cart-number,
 .cta {
   color: var(--white-100);
 }
@@ -156,8 +158,12 @@ h1 {
   background-color: var(--grayish-blue);
 }
 
+.cart-number,
 .cta {
   background-color: var(--orange);
+}
+
+.cta {
   box-shadow: var(--box-shadow-orange);
 }
 
@@ -169,6 +175,7 @@ h1 {
 4.  Typography
 */
 
+.cart-number,
 .cart-content span,
 .cart-inlay span,  
 .cta,
@@ -213,6 +220,10 @@ h1 {
   letter-spacing: var(--spacing-18);
 }
 
+.cart-number {
+  font-size: var(--size-10);
+}
+
 h2 {
   line-height: var(--height-32);
 }
@@ -230,6 +241,7 @@ h2 {
 5.  Flex
 */
 
+.cart-number,
 .cart-content,
 .cta,
 .amount-1,
@@ -337,6 +349,11 @@ main {
 8.  Layout
 */
 
+.cart-wrap {
+  position: relative;
+}
+
+.cart-number,
 .cart-overlay,
 .swap-btn-left,
 .swap-btn-right,
@@ -351,11 +368,11 @@ main {
 }
 
 .overlay {
-  z-index: 9;
+  z-index: 10;
 }
 
 .cart-overlay {
-  z-index: 10;
+  z-index: 9;
 }
 
 .mobile-nav {
@@ -388,6 +405,7 @@ nav ul {
   gap: 32px;
 }
 
+.cart-number,
 .cart-content,
 .cta,
 .amount-container,
@@ -406,6 +424,7 @@ nav ul {
   justify-content: flex-end;
 }
 
+.cart-number,
 .cart-content,
 .cta,
 .amount-1,
@@ -470,6 +489,14 @@ nav ul {
   width: 360px;
   top: 78px;
   right: 7.5px;
+}
+
+.cart-number {
+  width: 19px;
+  height: 13px;
+  border-radius: var(--radius-6-5);
+  top: -5px;
+  left: 9px;
 }
 
 .cart-content {
