@@ -247,7 +247,6 @@ h2 {
 /* 
 5.  Flex
 */
-
 .checkout-wrap,
 .text-wrap div,
 .text-wrap,
@@ -278,11 +277,14 @@ header  {
 }
 
 .text-wrap,
-.button-container,
 main,
 .mobile-nav ul,
 .mobile-nav  {
   flex-direction: column;
+}
+
+.button-container {
+  flex-wrap: wrap;
 }
 
 .cart-container > div,
@@ -453,6 +455,7 @@ nav ul {
   justify-content: flex-end;
 }
 
+.button-container,
 .cart-container,
 .checkout-wrap,
 .cart-number,
