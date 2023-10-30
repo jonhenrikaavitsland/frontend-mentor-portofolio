@@ -18,4 +18,5 @@ export function addToCart() {
   localStorage.setItem("price", 125);
   updateCartIcon();
   updateCartContent();
+  location.reload();
 }

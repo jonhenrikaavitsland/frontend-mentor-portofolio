@@ -7,6 +7,7 @@ import {
 import { openCart } from "./cart/openCart.js";
 import { addToCart, updateCartIcon } from "./cart/addToCart.js";
 import { updateCartContent } from "./cart/updateCartContent.js";
+import { clearCart } from "./cart/updateCartContent.js";
 
 ("use strict");
 
@@ -42,4 +43,13 @@ updateDisplay(); // updates the number between the - and + symbols.
 minusButton.addEventListener("click", subtractItem); // removes one item from the above.
 plusButton.addEventListener("click", addItem); // adds one item to the above.
 
+let trashBtn;
 
+function getElement() {
+  trashBtn = document.querySelector(".rem-ord");
+}
+
+setTimeout(getElement(), 5000);
+
+trashBtn.addEventListener("click", clearCart);
+console.log(trashBtn);

@@ -1,5 +1,6 @@
 import { cartContent } from "./../index.js";
 import { products } from "../Products/products.js";
+import { updateCartIcon } from "./addToCart.js";
 
 export function updateCartContent() {
   const count = localStorage.getItem("amount");
@@ -8,7 +9,7 @@ export function updateCartContent() {
   const localAmount = localStorage.getItem("amount");
   const localPrice = localStorage.getItem("price");
 
-  if (count !== "0") {
+  if (count !== "0" || !count) {
     cartContent.innerHTML = `
   <div class="cart-container-wrap">
     <div class="cart-container">
@@ -34,3 +35,13 @@ export function updateCartContent() {
     cartContent.innerHTML = "<span>Your cart is empty.</span>";
   }
 }
+
+export function clearCart() {
+  if (localStorage.getItem("amount") !== "0") {
+    localStorage.setItem("amount", "0");
+    updateCartIcon();
+    updateCartContent();
+  }
+}
+
+console.log(localStorage);
