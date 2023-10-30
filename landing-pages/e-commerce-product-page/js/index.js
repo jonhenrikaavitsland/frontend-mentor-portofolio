@@ -6,7 +6,7 @@ import {
 } from "./counter/counterDisplay.js";
 import { openCart } from "./cart/openCart.js";
 import { addToCart, updateCartIcon } from "./cart/addToCart.js";
-
+import { updateCartContent } from "./cart/updateCartContent.js";
 
 ("use strict");
 
@@ -22,11 +22,12 @@ export const cartLinkNumber = document.querySelector(".cart-number");
 
 const cart = document.querySelector(".cart-wrap");
 export const cartOverlay = document.querySelector(".cart-overlay");
-
 const addToCartBtn = document.querySelector(".cta");
+export const cartContent = document.querySelector(".cart-content");
 
 // Cart
-updateCartIcon();
+updateCartIcon(); // updates the cart icon in the top with amount of items in the cart.
+updateCartContent(); // generates the html in the cart.
 cart.addEventListener("click", openCart); // open/close cart overlay by clicking the cart icon.
 addToCartBtn.addEventListener("click", addToCart); // adds the item to local storage.
 

@@ -1,5 +1,6 @@
 import { itemCount } from "../counter/counterDisplay.js";
 import { cartLinkNumber } from "../index.js";
+import { updateCartContent } from "./updateCartContent.js";
 
 export function updateCartIcon() {
   const amount = localStorage.getItem("amount");
@@ -15,6 +16,6 @@ export function addToCart() {
   localStorage.setItem("item", "Fall Limited Editon Sneakers");
   localStorage.setItem("amount", itemCount);
   localStorage.setItem("price", 125);
-  localStorage.setItem("discount", 50);
   updateCartIcon();
+  updateCartContent();
 }
