@@ -1,6 +1,6 @@
-import { amountDisplay } from "./../index.js";
+import { amountDisplay } from "../index.js";
 
-let itemCount = 0;
+export let itemCount = 0;
 
 export function updateDisplay() {
   amountDisplay.textContent = itemCount;

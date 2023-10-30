@@ -513,10 +513,6 @@ nav ul {
   border-radius: var(--radius-10);
 }
 
-.cart-icon {
-  border-radius: var(--radius-24);
-} 
-
 .swap-btn-left,
 .swap-btn-right {
   border-radius: var(--radius-50);
