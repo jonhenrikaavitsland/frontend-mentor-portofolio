@@ -2,7 +2,8 @@ import { itemCount } from "../counter/counterDisplay.js";
 import { cartLinkNumber } from "../index.js";
 
 export function updateCartIcon() {
-  if (localStorage.getItem("amount")) {
+  const amount = localStorage.getItem("amount");
+  if (amount !== "0") {
     cartLinkNumber.textContent = localStorage.getItem("amount");
     cartLinkNumber.classList.remove("hidden");
   } else {

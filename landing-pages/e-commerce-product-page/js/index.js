@@ -28,7 +28,7 @@ const addToCartBtn = document.querySelector(".cta");
 // Cart
 updateCartIcon();
 cart.addEventListener("click", openCart); // open/close cart overlay by clicking the cart icon.
-addToCartBtn.addEventListener("click", addToCart);
+addToCartBtn.addEventListener("click", addToCart); // adds the item to local storage.
 
 // Hamburger Menu
 openMenu.addEventListener("click", menuOpen); // opens the hamburger menu.
