@@ -639,6 +639,10 @@ nav ul {
     padding: 0 0 45px 0;
   }
 
+  .left-nav {
+    z-index: 1;
+  }
+
   .profile-pic {
     height: 50px;
   }
@@ -656,10 +660,34 @@ nav ul {
 
   main {
     padding: 62px 0 0 0;
-    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 125px;
+    flex-wrap: wrap;
   }
 
   .carousel {
+    display: flex;
+    flex-direction: column;
+    width: 445px;
+    row-gap: 32px;
+  }
+
+  .thumbnails {
+    display: flex;
+    gap: 31px;
+  }
+
+  .thumbnails img {
+    height: 88px;
+    border-radius: var(--radius-10);
+  }
+
+  .image-display {
+    border-radius: var(--radius-15);
+  }
+
+  .product-info-container {
     width: 445px;
   }
 }
