@@ -656,7 +656,13 @@ nav ul {
     border-bottom: 4px solid;
     border-color: var(--orange);
     transition: 500ms;
-  } 
+  }
+
+  .profile-pic:hover {
+    border: 2px solid;
+    border-color: var(--orange);
+    border-radius: var(--radius-50);
+  }
 
   main {
     padding: 62px 0 0 0;
@@ -689,5 +695,17 @@ nav ul {
 
   .product-info-container {
     width: 445px;
+  }
+
+  .amount-container {
+    width: 157px;
+  }
+
+  .button-container {
+    flex-wrap: nowrap;
+  }
+
+  .product-info-container {
+    padding: 62px;
   }
 }
