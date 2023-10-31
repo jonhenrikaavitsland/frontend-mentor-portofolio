@@ -4,7 +4,9 @@ import { updateCartContent } from "./updateCartContent.js";
 
 export function updateCartIcon() {
   const amount = localStorage.getItem("amount");
-  if (amount !== "0") {
+  if (!amount) {
+    // do nothing
+  } else if (amount !== "0") {
     cartLinkNumber.textContent = localStorage.getItem("amount");
     cartLinkNumber.classList.remove("hidden");
   } else {
@@ -20,3 +22,4 @@ export function addToCart() {
   updateCartContent();
   location.reload();
 }
+

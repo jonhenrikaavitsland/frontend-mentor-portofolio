@@ -45,3 +45,4 @@ export function clearCart() {
 }
 
 console.log(localStorage);
+

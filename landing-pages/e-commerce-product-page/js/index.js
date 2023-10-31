@@ -6,7 +6,7 @@ import {
 } from "./counter/counterDisplay.js";
 import { openCart } from "./cart/openCart.js";
 import { addToCart, updateCartIcon } from "./cart/addToCart.js";
-import { updateCartContent } from "./cart/updateCartContent.js";
+import { checkToUpdate } from "./cart/checkToUpdate.js";
 import { clearCart } from "./cart/updateCartContent.js";
 
 ("use strict");
@@ -28,7 +28,7 @@ export const cartContent = document.querySelector(".cart-content");
 
 // Cart
 updateCartIcon(); // updates the cart icon in the top with amount of items in the cart.
-updateCartContent(); // generates the html in the cart.
+checkToUpdate(); // generates the html in the cart if condition is true.
 cart.addEventListener("click", openCart); // open/close cart overlay by clicking the cart icon.
 addToCartBtn.addEventListener("click", addToCart); // adds the item to local storage.
 
@@ -51,5 +51,4 @@ function getElement() {
 
 setTimeout(getElement(), 5000);
 
-trashBtn.addEventListener("click", clearCart);
-console.log(trashBtn);
+if (trashBtn) trashBtn.addEventListener("click", clearCart);

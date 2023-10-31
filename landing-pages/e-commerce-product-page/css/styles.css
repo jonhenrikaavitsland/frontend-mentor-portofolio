@@ -247,6 +247,9 @@ h2 {
 /* 
 5.  Flex
 */
+
+main,
+.product-img-wrap,
 .checkout-wrap,
 .text-wrap div,
 .text-wrap,
@@ -264,7 +267,6 @@ h2 {
 .discount-wrap,
 .before-price,
 .price-container,
-main,
 .swap-btn-left,
 .swap-btn-right,
 .right-nav,
@@ -276,8 +278,8 @@ header  {
   display: flex;
 }
 
-.text-wrap,
 main,
+.text-wrap,
 .mobile-nav ul,
 .mobile-nav  {
   flex-direction: column;
@@ -406,6 +408,7 @@ main {
   z-index: 11;
 }
 
+.carousel,
 .hidden {
   display: none;
 }
@@ -617,3 +620,46 @@ nav ul {
   grid-column: 2 / -1;
 }
 
+
+@media (min-width: 800px) {
+
+  .product-img-container,
+  .menu {
+    display: none;
+  }
+
+  .carousel,
+  #nav {
+    display: block;
+  }
+
+  .right-nav,
+  .left-nav {
+    border-bottom: 1px solid #E4E9F2;
+    padding: 0 0 45px 0;
+  }
+
+  .profile-pic {
+    height: 50px;
+  }
+
+  .right-nav {
+    gap: 46px;
+  }
+
+  nav ul li a:hover {
+    padding: 0 0 60px 0;
+    border-bottom: 4px solid;
+    border-color: var(--orange);
+    transition: 500ms;
+  } 
+
+  main {
+    padding: 62px 0 0 0;
+    align-items: center;
+  }
+
+  .carousel {
+    width: 445px;
+  }
+}
