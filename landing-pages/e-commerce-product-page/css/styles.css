@@ -173,6 +173,14 @@ h1 {
   box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.50);
 }
 
+.image-overlay {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 100%)
+}
+
+.hover-overlay {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%)
+}
+
 /* 
 4.  Typography
 */
@@ -378,10 +386,13 @@ main {
 8.  Layout
 */
 
+.thumb-wrap,
 .cart-wrap {
   position: relative;
 }
 
+.hover-overlay,
+.image-overlay,
 .mobile-nav,
 .cart-number,
 .cart-overlay,
@@ -389,6 +400,11 @@ main {
 .swap-btn-right,
 .overlay {
   position: absolute;
+}
+
+.hover-overlay,
+.image-overlay {
+  z-index: 1;
 }
 
 .swap-btn-left,
@@ -504,6 +520,8 @@ nav ul {
   height: 24px;
 }
 
+.hover-overlay,
+.image-overlay,
 .overlay {
   top: 0;
   left: 0;
@@ -590,6 +608,16 @@ nav ul {
 
 .cart-inlay {
   border-bottom: 1px solid #E4E9F2;
+}
+
+.image-overlay {
+  border: 2px solid;
+  border-color: var(--orange);
+}
+
+.hover-overlay,
+.image-overlay {
+  border-radius: var(--radius-10);
 }
 
 .text-title,
@@ -707,5 +735,20 @@ nav ul {
 
   .product-info-container {
     padding: 62px;
+  }
+
+  .cta:hover {
+    background-color: #FFAB6A;
+    transition: 500ms;
+  }
+
+  .amount-1 img:hover {
+    content: "./../images/icon-minus-hover.svg";
+    transition: 500ms;
+  }
+
+  .amount-3 img:hover {
+    src: "./../images/icon-plus-hover.svg";
+    transition: 500ms;
   }
 }
