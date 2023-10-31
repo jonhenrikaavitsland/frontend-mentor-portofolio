@@ -696,7 +696,7 @@ nav ul {
     padding: 62px 0 0 0;
     justify-content: center;
     flex-direction: row;
-    gap: 125px;
+    column-gap: 125px;
     flex-wrap: wrap;
   }
 
@@ -734,21 +734,11 @@ nav ul {
   }
 
   .product-info-container {
-    padding: 62px;
+    padding: 62px 0 62px 0;
   }
 
   .cta:hover {
     background-color: #FFAB6A;
-    transition: 500ms;
-  }
-
-  .amount-1 img:hover {
-    content: "./../images/icon-minus-hover.svg";
-    transition: 500ms;
-  }
-
-  .amount-3 img:hover {
-    src: "./../images/icon-plus-hover.svg";
     transition: 500ms;
   }
 }
