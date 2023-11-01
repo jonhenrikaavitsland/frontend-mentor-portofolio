@@ -94,9 +94,8 @@ thumbThree.addEventListener("mouseleave", afterHoverThumbThree);
 thumbFour.addEventListener("mouseover", hoverThumbFour);
 thumbFour.addEventListener("mouseleave", afterHoverThumbFour);
 
+// Sets active image and displays correct image in the gallery; 
 thumbOne.addEventListener("click", onClickThumbnailOne);
 thumbTwo.addEventListener("click", onClickThumbnailTwo);
 thumbThree.addEventListener("click", onClickThumbnailThree);
 thumbFour.addEventListener("click", onClickThumbnailFour);
-
-console.log(imageDisplay);
