@@ -8,6 +8,22 @@ import { openCart } from "./cart/openCart.js";
 import { addToCart, updateCartIcon } from "./cart/addToCart.js";
 import { checkToUpdate } from "./cart/checkToUpdate.js";
 import { clearCart } from "./cart/updateCartContent.js";
+import {
+  hoverThumbOne,
+  hoverThumbTwo,
+  hoverThumbThree,
+  hoverThumbFour,
+  afterHoverThumbOne,
+  afterHoverThumbTwo,
+  afterHoverThumbThree,
+  afterHoverThumbFour,
+} from "./gallery/hoverThumbnails.js";
+import {
+  onClickThumbnailOne,
+  onClickThumbnailTwo,
+  onClickThumbnailThree,
+  onClickThumbnailFour,
+} from "./gallery/onClickThumbnails.js";
 
 ("use strict");
 
@@ -52,3 +68,34 @@ function getElement() {
 setTimeout(getElement(), 5000);
 
 if (trashBtn) trashBtn.addEventListener("click", clearCart);
+
+// Hover functions for thumbnails
+export const activeImage1 = document.querySelectorAll(".thumb-1");
+export const activeImage2 = document.querySelectorAll(".thumb-2");
+export const activeImage3 = document.querySelectorAll(".thumb-3");
+export const activeImage4 = document.querySelectorAll(".thumb-4");
+const thumbOne = document.querySelector(".thumbnail-1");
+const thumbTwo = document.querySelector(".thumbnail-2");
+const thumbThree = document.querySelector(".thumbnail-3");
+const thumbFour = document.querySelector(".thumbnail-4");
+export const thumbOver1 = document.querySelector(".thumb-1-h");
+export const thumbOver2 = document.querySelector(".thumb-2-h");
+export const thumbOver3 = document.querySelector(".thumb-3-h");
+export const thumbOver4 = document.querySelector(".thumb-4-h");
+
+// If not active image, run hover, when no longer hovering, reset state.
+thumbOne.addEventListener("mouseover", hoverThumbOne);
+thumbOne.addEventListener("mouseleave", afterHoverThumbOne);
+thumbTwo.addEventListener("mouseover", hoverThumbTwo);
+thumbTwo.addEventListener("mouseleave", afterHoverThumbTwo);
+thumbThree.addEventListener("mouseover", hoverThumbThree);
+thumbThree.addEventListener("mouseleave", afterHoverThumbThree);
+thumbFour.addEventListener("mouseover", hoverThumbFour);
+thumbFour.addEventListener("mouseleave", afterHoverThumbFour);
+
+thumbOne.addEventListener("click", onClickThumbnailOne);
+thumbTwo.addEventListener("click", onClickThumbnailTwo);
+thumbThree.addEventListener("click", onClickThumbnailThree);
+thumbFour.addEventListener("click", onClickThumbnailFour);
+
+console.log(activeImage1);
