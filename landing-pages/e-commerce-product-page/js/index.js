@@ -82,6 +82,7 @@ export const thumbOver1 = document.querySelector(".thumb-1-h");
 export const thumbOver2 = document.querySelector(".thumb-2-h");
 export const thumbOver3 = document.querySelector(".thumb-3-h");
 export const thumbOver4 = document.querySelector(".thumb-4-h");
+export const imageDisplay = document.querySelector(".image-display");
 
 // If not active image, run hover, when no longer hovering, reset state.
 thumbOne.addEventListener("mouseover", hoverThumbOne);
@@ -98,4 +99,4 @@ thumbTwo.addEventListener("click", onClickThumbnailTwo);
 thumbThree.addEventListener("click", onClickThumbnailThree);
 thumbFour.addEventListener("click", onClickThumbnailFour);
 
-console.log(activeImage1);
+console.log(imageDisplay);

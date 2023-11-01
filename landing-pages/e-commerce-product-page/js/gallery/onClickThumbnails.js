@@ -3,13 +3,16 @@ import {
   activeImage2,
   activeImage3,
   activeImage4,
+  imageDisplay,
 } from "./../index.js";
+import { products } from "../Products/products.js";
 
 export function onClickThumbnailOne() {
   activeImage1[0].classList.remove("hidden");
   activeImage2[0].classList.add("hidden");
   activeImage3[0].classList.add("hidden");
   activeImage4[0].classList.add("hidden");
+  imageDisplay.src = `${products[0].image}`;
 }
 
 export function onClickThumbnailTwo() {
@@ -17,6 +20,7 @@ export function onClickThumbnailTwo() {
   activeImage1[0].classList.add("hidden");
   activeImage3[0].classList.add("hidden");
   activeImage4[0].classList.add("hidden");
+  imageDisplay.src = `${products[1].image}`;
 }
 
 export function onClickThumbnailThree() {
@@ -24,6 +28,7 @@ export function onClickThumbnailThree() {
   activeImage1[0].classList.add("hidden");
   activeImage2[0].classList.add("hidden");
   activeImage4[0].classList.add("hidden");
+  imageDisplay.src = `${products[2].image}`;
 }
 
 export function onClickThumbnailFour() {
@@ -31,4 +36,5 @@ export function onClickThumbnailFour() {
   activeImage1[0].classList.add("hidden");
   activeImage2[0].classList.add("hidden");
   activeImage3[0].classList.add("hidden");
+  imageDisplay.src = `${products[3].image}`;
 }
