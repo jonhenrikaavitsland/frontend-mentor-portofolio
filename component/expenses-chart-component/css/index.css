@@ -1,0 +1,262 @@
+/* Table of contents
+
+1.  Custom Variables
+2.  Global Styles
+3.  Color
+4.  Typography
+5.  Flex
+6.  Grid
+7.  Layout
+8.  Margin
+9.  Padding
+10. @Media
+
+*/
+
+
+/*
+1.  Custom Variables
+*/
+
+:root {
+  /* Primary Colors */
+  --soft-red: #EC755D;
+  --cyan: #76B5BC;
+
+  /* Neutral Colors */
+  --pale-orange: #FF9B86; /* background hover */
+  --pale-cyan: #B4E0E5; /* background hover */
+  --dark-brown: #382314; /* background hover and text*/
+  --medium-brown: #92857A; /* text */
+  --card-white: #FFFBF6; /* Card background */
+  --cream-bg: #F8E9DD; /* body bg */
+  --white100: #fff;
+
+  /* Typography */
+  --dm-sans: 'DM Sans', sans-serif;
+  --w4: 400;
+  --w7: 700;
+  --s12: 0.75rem;
+  --s15: 0.9375rem;
+  --s18: 1.125rem;
+  --s24: 1.5rem;
+  --s30: 1.875rem;
+  --s32: 2rem;
+  --s48: 3rem;
+
+  /* Border-radius */
+  --r3: 3px;
+  --r5: 5px;
+  --r10: 10px;
+}
+
+
+/* 
+2.  Global Styles
+*/
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: normal;
+  font-weight: inherit;
+}
+
+body {
+  background-color: var(--cream-bg);
+  color: var(--white100);
+  font-family: var(--dm-sans);
+  font-size: var(--s18);
+  font-weight: var(--w4);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+
+/* 
+3.  Colors
+*/
+
+.top-wrap {
+  background-color: var(--soft-red);
+}
+
+.bottom-wrap {
+  background-color: var(--card-white);
+  color: var(--dark-brown);
+}
+
+.chart-wrap p {
+  color: var(--medium-brown);
+}
+
+/* 
+4.  Typography
+*/
+
+.top-wrap h2 {
+  font-feature-settings: 'clig' off, 'liga' off;
+}
+
+.chart-wrap p {
+  font-size: var(--s12);
+  text-align: center;
+}
+
+.top-wrap h2 {
+  font-size: var(--s15);
+}
+
+.spending h2,
+.top-wrap p {
+  font-size: var(--s24);
+}
+
+.spending h2,
+.top-wrap p {
+  font-weight: var(--w7);
+}
+
+
+/* 
+5.  Flex
+*/
+
+.card-btm,
+.chart-wrap,
+.top-wrap section,
+.card-img-wrap,
+.top-wrap,
+.card-wrap {
+  display: flex;
+}
+
+.top-wrap section,
+.card-wrap {
+  flex-direction: column;
+}
+
+.card-btm section,
+.card-btm div,
+.top-wrap section,
+.card-img-wrap {
+  flex: 1;
+}
+
+/* 
+6.  Grid
+*/
+
+
+/* 
+7.  Layout
+*/
+
+.top-wrap section {
+  gap: 4px;
+}
+
+.chart-wrap {
+  gap: 12px;
+}
+
+.card-wrap {
+  gap: 16px;
+}
+
+.top-wrap {
+  height: 97px;
+}
+
+.top-wrap,
+.bottom-wrap {
+  width: 343px;
+}
+
+.chart-wrap {
+  height: 253px;
+}
+
+.day-of-week {
+  width: 33px;
+}
+
+.top-wrap section,
+.card-img-wrap {
+  justify-content: flex-end;
+}
+
+.chart-wrap {
+  align-items: flex-end;
+}
+
+.top-wrap,
+.bottom-wrap {
+  border-radius: var(--r10);
+}
+
+.chart-wrap {
+  border-bottom: 2px solid #F8E9DD;
+}
+
+
+/* 
+8.  Margin
+*/
+
+.card-wrap {
+  margin: 0 16px 0 16px;
+}
+
+
+.spending {
+  margin-bottom: 24px;
+}
+
+/* 
+9.  Padding
+*/
+
+.top-wrap {
+  padding: 20px 24px 22px 20px;
+}
+
+.card-img-wrap {
+  padding: 8px 0 7px 0;
+}
+
+.bottom-wrap {
+  padding: 24px 20px;
+}
+
+.chart-wrap {
+  padding: 24px;
+}
+
+/* 
+10. @Media
+*/
