@@ -55,8 +55,16 @@
 2.  Global Styles
 */
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--dark-brown)
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -101,8 +109,13 @@ main {
 3.  Colors
 */
 
+.bar,
 .top-wrap {
   background-color: var(--soft-red);
+}
+
+#active-bar {
+  background-color: var(--cyan);
 }
 
 .bottom-wrap {
@@ -110,6 +123,8 @@ main {
   color: var(--dark-brown);
 }
 
+.card-btm section h2,
+.flm,
 .chart-wrap p {
   color: var(--medium-brown);
 }
@@ -127,6 +142,8 @@ main {
   text-align: center;
 }
 
+.card-btm div p,
+.card-btm section h2,
 .top-wrap h2 {
   font-size: var(--s15);
 }
@@ -136,9 +153,19 @@ main {
   font-size: var(--s24);
 }
 
+.card-btm section p {
+  font-size: var(--s30);
+}
+
+.card-btm section p,
+.differ,
 .spending h2,
 .top-wrap p {
   font-weight: var(--w7);
+}
+
+.card-btm div p {
+  text-align: right;
 }
 
 
@@ -176,6 +203,23 @@ main {
 7.  Layout
 */
 
+.day-of-week {
+  position: relative;
+}
+
+.chart-day {
+  position: absolute;
+}
+
+.top-wrap section,
+.card-img-wrap {
+  justify-content: flex-end;
+}
+
+.chart-wrap {
+  align-items: flex-end;
+}
+
 .top-wrap section {
   gap: 4px;
 }
@@ -205,13 +249,24 @@ main {
   width: 33px;
 }
 
-.top-wrap section,
-.card-img-wrap {
-  justify-content: flex-end;
+.bar-mon,
+.bar-tue,
+.bar-wed,
+.bar-thu,
+.bar-fri,
+.bar-sat,
+.bar-sun {
+  height: 0px;
+  width: 33px;
 }
 
-.chart-wrap {
-  align-items: flex-end;
+.chart-day {
+  bottom: -27px;
+  width: 33px;
+}
+
+.bar {
+  border-radius: var(--r3);
 }
 
 .top-wrap,
@@ -232,10 +287,14 @@ main {
   margin: 0 16px 0 16px;
 }
 
-
 .spending {
   margin-bottom: 24px;
 }
+
+.card-btm {
+  margin: 24px 0 0 0;
+}
+
 
 /* 
 9.  Padding
@@ -254,8 +313,9 @@ main {
 }
 
 .chart-wrap {
-  padding: 24px;
+  padding: 0 0 51px 0;
 }
+
 
 /* 
 10. @Media
