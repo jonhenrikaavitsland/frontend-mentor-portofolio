@@ -1,0 +1,258 @@
+/* 
+Table of contents
+
+1.  Custom Variables
+2.  Global Styles
+3.  colors
+4.  Typography
+5.  Flex
+6.  Grid
+7.  Layout
+8.  Margin
+9.  Padding
+10  @Media
+*/
+
+
+/* 
+1.  Custom Variables
+*/
+
+
+:root {
+  /* Primary Colors */
+  --very-dark-blue: #1E1F36; /* Text */
+  --soft-red: #F47B56;  /* Text, Arrows */
+
+  /* Background gradient */
+  --bg: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
+
+  /* Neutral Colors */
+  --very-dark-grayish-blue: #4B4C5F; /* Text */
+  --dark-grayish-blue: #787887; /* Text */
+
+  /* Dividers */
+  --light-grayish-blue: #E8E8EA;
+
+  /* BG */
+  --white-100: #FFF;
+
+
+  /* Typography */
+  --kumbh-sans: 'Kumbh Sans', sans-serif;
+
+  /* Font Weight */
+  --w4: 400;
+  --w7: 700;
+
+  /* Font size */
+  --s12: 0.75rem;
+  --s13: 0.8125rem;
+  --s14: 0.875rem;
+  --s32: 2rem;
+
+  /* Line Height */
+  --l18: 1.125rem;
+
+
+  /* Border Radius: */
+  --r23: 23px;
+
+  /* Box Shadow */
+  --shadow-1: 0px 50px 50px -20px rgba(53, 18, 122, 0.50);
+}
+
+
+/* 
+2.  Global Styles
+*/
+
+.attribution { font-size: 11px; text-align: center; color: var(--white-100);}
+.attribution a { color: hsl(54, 100%, 50%) }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2 {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-style: inherit;
+  line-height: normal;
+  font-weight: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--kumbh-sans);
+  font-size: var(--s12);
+  font-weight: var(--w4);
+  background: var(--bg);
+  color: var(--very-dark-grayish-blue);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 920px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* 
+3.  Colors
+*/
+
+.wrap {
+  background-color: var(--white-100);
+  box-shadow: var(--shadow-1);
+}
+
+.btn-container button {
+  background-color: transparent;
+}
+
+h1 {
+  color: var(--very-dark-blue);
+}
+
+p {
+  color: var(--dark-grayish-blue);
+}
+
+
+/* 
+4.  Typography
+*/
+
+h1 {
+  font-weight: var(--w7);
+  font-size: var(--s32);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  font-size: var(--s13);
+}
+
+p {
+  line-height: var(--l18);
+}
+
+
+/* 
+5.  Flex
+*/
+.image-wrap,
+.btn-container,
+.q section {
+  display: flex;
+}
+
+.btn-container {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.image-wrap {
+  justify-content: center;
+}
+
+/* 
+6.  Grid
+*/
+
+
+/*
+7.  Layout
+*/
+.image-wrap {
+  position: relative;
+}
+
+.illustration-woman {
+  position: absolute;
+  width: 237px;
+  height: 180px;
+  background-image: url("./../images/illustration-woman-online-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: -240px;
+  z-index: 10;
+}
+
+.bg-pattern {
+  position: absolute;
+  width: 240px;
+  height: 145px;
+  background-image: url("./../images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: -130px;
+  z-index: 5;
+}
+
+
+.wrap {
+  border-radius: var(--r23);
+}
+
+.btn-container button {
+  border: none;
+}
+
+.q {
+  border-bottom: 1px solid;
+  border-color: var(--light-grayish-blue);
+}
+
+/* 
+8.  Padding
+*/
+
+.wrap {
+  padding: 132px 24px 48px 25px;
+}
+
+.q {
+  padding: 18px 0;
+}
+
+.a {
+  padding-top: 13px;
+}
+
+
+/* 
+9.  Margins
+*/
+
+.wrap {
+  margin: 148px 24px 85px 24px;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+}
+
+
+/* 
+10. @Media
+*/
