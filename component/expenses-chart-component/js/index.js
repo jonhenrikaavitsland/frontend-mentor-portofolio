@@ -1,5 +1,3 @@
-import { getSizeOfBars } from "./data/getPercentage.js";
-
 const barMonday = document.querySelector(".bar-mon");
 const barTuesday = document.querySelector(".bar-tue");
 const barWednesday = document.querySelector(".bar-wed");
@@ -10,12 +8,12 @@ const barSunday = document.querySelector(".bar-sun");
 
 // getting an array of amounts to use to adjust the length of the bars.
 
-const amounts = getSizeOfBars();
+// barMonday.setAttribute("style", `height: ${amounts[0]}px`);
+// barTuesday.setAttribute("style", `height: ${amounts[1]}px`);
+// barWednesday.setAttribute("style", `height: ${amounts[2]}px`);
+// barThursday.setAttribute("style", `height: ${amounts[3]}px`);
+// barFriday.setAttribute("style", `height: ${amounts[4]}px`);
+// barSaturday.setAttribute("style", `height: ${amounts[5]}px`);
+// barSunday.setAttribute("style", `height: ${amounts[6]}px`);
 
-barMonday.setAttribute("style", `height: ${amounts[0]}px`);
-barTuesday.setAttribute("style", `height: ${amounts[1]}px`);
-barWednesday.setAttribute("style", `height: ${amounts[2]}px`);
-barThursday.setAttribute("style", `height: ${amounts[3]}px`);
-barFriday.setAttribute("style", `height: ${amounts[4]}px`);
-barSaturday.setAttribute("style", `height: ${amounts[5]}px`);
-barSunday.setAttribute("style", `height: ${amounts[6]}px`);
+const data = require("./data/data.json");
