@@ -1,6 +1,6 @@
 async function getData() {
   try {
-    const response = await fetch("./../api/data.json");
+    const response = await fetch("./api/data.json");
     if (!response.ok) {
       throw new Error(
         `Network response was not ok. Status: ${response.status}`
@@ -15,3 +15,4 @@ async function getData() {
 }
 
 const newData = await getData();
+console.log(newData);
