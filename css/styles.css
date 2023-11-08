@@ -248,6 +248,10 @@ h3 {
   color: var(--red-600);
 }
 
+.span-api {
+  color: lime;
+}
+
 /*
 ==========
 7.  Footer
