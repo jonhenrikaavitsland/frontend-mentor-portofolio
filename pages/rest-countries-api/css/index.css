@@ -111,6 +111,7 @@ body {
   --fa-secondary-color: rgb(255, 0, 0);
 }
 
+.filter-search,
 .search-bar,
 header {
   background-color: var(--white);
@@ -124,6 +125,7 @@ header {
   color: var(--dark-gray);
 }
 
+.filter-search,
 header,
 .search-bar {
   box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
@@ -133,6 +135,7 @@ header,
 4.  Typography
 */
 
+.filter-search p,
 .search-bar input {
   font-weight: var(--w4);
 }
@@ -145,15 +148,18 @@ header,
   font-weight: var(--w8);
 }
 
+.filter-search p,
 .search-bar input,
 .dark-mode p {
   font-size: var(--s12);
 }
 
+.filter-search p,
 .home h1,
 .search-bar input {
   line-height: var(--l20);
 }
+
 
 /* 
 5.  Flex
@@ -187,6 +193,11 @@ header div {
   justify-content: flex-end;
 }
 
+.filter-search {
+  justify-content: center;
+}
+
+.filter-search,
 .fa-moon-stars,
 .dark-mode div,
 .search-bar div,
@@ -205,6 +216,10 @@ header {
 
 .search-bar div {
   gap: 26px;
+}
+
+.filter-search {
+  gap: 62px;
 }
 
 /* 
@@ -235,12 +250,18 @@ h1,
   height: 48px;
 }
 
+.filter-search {
+  width: 200px;
+  height: 48px;
+}
+
 .search-bar input,
 .search-bar div {
   width: 100%;
   height: 100%;
 }
 
+.filter-search,
 .search-bar {
   border-radius: var(--r5);
 }
@@ -287,6 +308,7 @@ header {
 */
 
 @media (min-width: 800px) {
+  .filter-search,
   .search-bar {
     height: 56px;
   }
@@ -317,12 +339,22 @@ header {
     flex-direction: row;
   }
 
-  .search-bar,
-  .filter-search {
+  .filter-wrap,
+  .search-bar {
     flex: 1;
   }
 
-  .filter-search {
+  .filter-wrap {
+    display: flex;
+  }
+
+  .filter-wrap {
     justify-content: flex-end;
   }
+
+  .main-home {
+    padding: 48px 80px;
+  }
+
+
 }
