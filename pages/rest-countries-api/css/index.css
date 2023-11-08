@@ -102,6 +102,10 @@ body {
   margin: 0;
 }
 
+main {
+  flex: 1;
+}
+
 
 /* 
 3.  Colors
@@ -164,6 +168,8 @@ header,
 /* 
 5.  Flex
 */
+main,
+.countries-container,
 .fa-moon-stars,
 .dark-mode div,
 .search-bar,
@@ -175,6 +181,7 @@ header {
   display: flex;
 }
 
+main,
 .search-wrap {
   flex-direction: column;
 }
@@ -292,6 +299,10 @@ header {
 
 .search-bar div {
   padding: 0 0 0 32px;
+}
+
+.countries-container {
+  padding: 0 40px;
 }
 
 /*
