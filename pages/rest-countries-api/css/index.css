@@ -1,0 +1,328 @@
+/* 
+
+Table of contents:
+
+1.  Custom Variables
+2.  Global Styles
+3.  Colors
+4.  Typography
+5.  Flex
+6.  Grid
+7.  Layout
+8.  Padding
+9.  Margin
+10. @Media
+
+*/
+
+/* 
+1.  Custom Variables
+*/
+
+:root {
+
+  /* Neutral Colors: */
+  --white: #fff; /* Dark Mode Text & Light Mode Elements */
+  --very-light-gray: #FAFAFA; /* Light Mode Background */
+  --dark-gray: #848484; /* Light Mode Input */
+  --very-dark-blue: #111517; /* Light Mode Text */
+  --very-dark-blue-bg: #202C36; /* Dark Mode Background */
+  --very-dark-blue-element: #2B3844; /* Dark Mode Elements */
+
+  /* Typography */
+  --nunito-sans: 'Nunito Sans', sans-serif;
+
+  /* Font Weight */
+  --w3: 300;
+  --w4: 400;
+  --w6: 600;
+  --w8: 800;
+
+  /* Font sizes */
+  --s12: 0.75rem;
+  --s14: 0.875rem;
+  --s16: 1rem;
+  --s18: 1.125rem;
+  --s22: 1.375rem;
+  --s24: 1.5rem;
+  --s32: 2rem;
+
+  /* Line Height */
+  --l16: 1rem;
+  --l20: 1.25rem;
+  --l24: 1.5rem;
+  --l26: 1.625rem;
+  --l32: 2rem;
+
+  /* Border Radius */
+  --r5: 5px;
+}
+
+
+/* 
+2.  Global Styles
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+button {
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: center;
+}
+
+body {
+  background-color: var(--very-light-gray);
+  color: var(--very-dark-blue);
+  font-family: var(--nunito-sans);
+  font-weight: var(--w3);
+  font-size: var(--s14);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* 
+3.  Colors
+*/
+.fa-duotone {
+  --fa-primary-color: #111517;
+  --fa-secondary-color: rgb(255, 0, 0);
+}
+
+.search-bar,
+header {
+  background-color: var(--white);
+}
+
+.dark-mode {
+  background-color: transparent;
+}
+
+.search-bar input {
+  color: var(--dark-gray);
+}
+
+header,
+.search-bar {
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* 
+4.  Typography
+*/
+
+.search-bar input {
+  font-weight: var(--w4);
+}
+
+.dark-mode p {
+  font-weight: var(--w6);
+}
+
+.home h1 {
+  font-weight: var(--w8);
+}
+
+.search-bar input,
+.dark-mode p {
+  font-size: var(--s12);
+}
+
+.home h1,
+.search-bar input {
+  line-height: var(--l20);
+}
+
+/* 
+5.  Flex
+*/
+.fa-moon-stars,
+.dark-mode div,
+.search-bar,
+.search-bar div,
+.filter-search,
+.search-wrap,
+header div, 
+header {
+  display: flex;
+}
+
+.search-wrap {
+  flex-direction: column;
+}
+
+.search-bar div {
+  flex-direction: row;
+}
+
+
+header section,
+header div {
+  flex: 1;
+}
+
+header div {
+  justify-content: flex-end;
+}
+
+.fa-moon-stars,
+.dark-mode div,
+.search-bar div,
+.search-bar,
+header {
+  align-items: center;
+}
+
+header {
+  flex-wrap: wrap;
+}
+
+.dark-mode div {
+  gap: 8px;
+}
+
+.search-bar div {
+  gap: 26px;
+}
+
+/* 
+6.  Grid
+*/
+
+
+/* 
+7.  Layout
+*/
+
+.fa-moon-stars {
+  width: 16px;
+  height: 16px;
+}
+
+.dark-mode {
+  border: none;
+}
+
+h1,
+.dark-mode {
+  white-space: nowrap;
+}
+
+.search-bar {
+  max-width: 480px;
+  height: 48px;
+}
+
+.search-bar input,
+.search-bar div {
+  width: 100%;
+  height: 100%;
+}
+
+.search-bar {
+  border-radius: var(--r5);
+}
+
+.search-bar input {
+  border: none;
+  border-radius: 0 5px 5px 0;
+}
+
+header {
+  height: 80px;
+}
+
+
+
+
+/* 
+8.  Padding
+*/
+
+.home {
+  padding: 0px 16px;
+}
+
+.main-home {
+  padding: 24px 16px 65px 16px;
+}
+
+.search-bar div {
+  padding: 0 0 0 32px;
+}
+
+/*
+9.  Margin
+*/
+
+.search-bar {
+  margin-bottom: 40px;
+}
+
+
+/* 
+10. @Media
+*/
+
+@media (min-width: 800px) {
+  .search-bar {
+    height: 56px;
+  }
+
+  .search-bar input {
+    font-size: var(--s14);
+  }
+
+  .dark-mode p {
+    font-size: var(--s16);
+  }
+
+  .home h1 {
+    font-size: var(--s24);
+    line-height: normal;
+  }
+
+  .home {
+    padding: 0px 80px
+  }
+
+  .fa-moon-stars {
+    width: 20px;
+    height: 20px;
+  }
+
+  .search-wrap {
+    flex-direction: row;
+  }
+
+  .search-bar,
+  .filter-search {
+    flex: 1;
+  }
+
+  .filter-search {
+    justify-content: flex-end;
+  }
+}
