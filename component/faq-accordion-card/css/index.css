@@ -138,6 +138,12 @@ p {
   color: var(--dark-grayish-blue);
 }
 
+#faq-container h2:hover,
+element {
+  color: var(--soft-red);
+  transition: 500ms;
+}
+
 
 /* 
 4.  Typography
@@ -175,6 +181,10 @@ p {
 
 .image-wrap {
   justify-content: center;
+}
+
+.q section {
+  gap: 34px;
 }
 
 /* 
@@ -227,6 +237,15 @@ p {
 .q {
   border-bottom: 1px solid;
   border-color: var(--light-grayish-blue);
+}
+
+.faq-container h2,
+button {
+  cursor: pointer;
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
 
 /* 
