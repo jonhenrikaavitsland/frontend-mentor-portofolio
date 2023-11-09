@@ -115,6 +115,7 @@ main {
   --fa-secondary-color: rgb(255, 0, 0);
 }
 
+.filter-regions,
 .filter-search,
 .search-bar,
 header {
@@ -129,6 +130,7 @@ header {
   color: var(--dark-gray);
 }
 
+.filter-regions,
 .filter-search,
 header,
 .search-bar {
@@ -139,6 +141,7 @@ header,
 4.  Typography
 */
 
+.filter-regions,
 .filter-search p,
 .search-bar input {
   font-weight: var(--w4);
@@ -152,10 +155,15 @@ header,
   font-weight: var(--w8);
 }
 
+.filter-regions,
 .filter-search p,
 .search-bar input,
 .dark-mode p {
   font-size: var(--s12);
+}
+
+.filter-regions {
+  line-height: var(--l16);
 }
 
 .filter-search p,
@@ -168,6 +176,7 @@ header,
 /* 
 5.  Flex
 */
+.filter-regions,
 main,
 .countries-container,
 .fa-moon-stars,
@@ -181,6 +190,7 @@ header {
   display: flex;
 }
 
+.filter-regions,
 main,
 .search-wrap {
   flex-direction: column;
@@ -217,6 +227,7 @@ header {
   flex-wrap: wrap;
 }
 
+.filter-regions,
 .dark-mode div {
   gap: 8px;
 }
@@ -237,6 +248,16 @@ header {
 /* 
 7.  Layout
 */
+
+.filter-wrap {
+  position: relative;
+}
+
+.filter-regions {
+  position: absolute;
+  top: 52px;
+  width: 200px;
+}
 
 .fa-moon-stars {
   width: 16px;
@@ -268,6 +289,7 @@ h1,
   height: 100%;
 }
 
+.filter-regions,
 .filter-search,
 .search-bar {
   border-radius: var(--r5);
@@ -295,6 +317,10 @@ header {
 
 .main-home {
   padding: 24px 16px 65px 16px;
+}
+
+.filter-regions {
+  padding: 16px 24px;
 }
 
 .search-bar div {
@@ -367,5 +393,7 @@ header {
     padding: 48px 80px;
   }
 
-
+  .filter-regions {
+    top: 64%;
+  }
 }

@@ -1,18 +1,22 @@
-async function getData() {
-  try {
-    const response = await fetch("./api/data.json");
-    if (!response.ok) {
-      throw new Error(
-        `Network response was not ok. Status: ${response.status}`
-      );
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("An error occurred:", error);
-    // Handle the error as needed
+import { getRegion } from "./data/getRegions.js";
+import { newData } from "./data/getData.js";
+
+const data = getRegion(newData);
+console.log(data);
+
+const parentContainer = document.querySelector(".filter-wrap");
+
+function createHtmlFilterRegions(regions, parent) {
+  const element = document.createElement("div");
+  element.classList.add("filter-regions");
+
+  for (let i = 0; i < regions.length; i++) {
+    const childRegion = document.createElement("p");
+    childRegion.innerText = `${regions[i]}`;
+    element.append(childRegion);
   }
+
+  parent.append(element);
 }
 
-const newData = await getData();
-console.log(newData);
+createHtmlFilterRegions(data, parentContainer);
