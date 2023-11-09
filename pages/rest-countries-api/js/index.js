@@ -1,22 +1,19 @@
-import { getRegion } from "./data/getRegions.js";
-import { newData } from "./data/getData.js";
+import { regions } from "./render/renderRegions.js";
+import { parentContainer } from "./render/renderRegions.js";
+import { createHtmlFilterRegions } from "./render/renderRegions.js";
+import { filterSearch, openFilter } from "./Listeners/openFilter.js";
+import { reversedData } from "./data/getData.js";
+import { createCountryCard } from "./render/renderCountriesCard.js";
 
-const data = getRegion(newData);
-console.log(data);
+// Renders the html for the filter by region menu
+createHtmlFilterRegions(regions, parentContainer);
 
-const parentContainer = document.querySelector(".filter-wrap");
+// exports for later use
+export const filterRegions = document.querySelector(".filter-regions");
 
-function createHtmlFilterRegions(regions, parent) {
-  const element = document.createElement("div");
-  element.classList.add("filter-regions");
+// on click it will open or close the filer by region menu
+filterSearch.addEventListener("click", openFilter);
 
-  for (let i = 0; i < regions.length; i++) {
-    const childRegion = document.createElement("p");
-    childRegion.innerText = `${regions[i]}`;
-    element.append(childRegion);
-  }
-
-  parent.append(element);
-}
-
-createHtmlFilterRegions(data, parentContainer);
+// Renders country cards
+createCountryCard(reversedData);
+console.log(reversedData);

@@ -15,4 +15,17 @@ async function getData() {
 }
 
 export const newData = await getData();
-console.log(newData);
+
+
+function getReversedData() {
+  const reversedData = [];
+
+  for (let i = newData.length - 1; i >= 0; i--) {
+    const valueAtIndex = newData[i];
+
+    reversedData.push(valueAtIndex);
+  }
+  return reversedData;
+}
+
+export const reversedData = getReversedData();

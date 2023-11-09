@@ -115,6 +115,7 @@ main {
   --fa-secondary-color: rgb(255, 0, 0);
 }
 
+.country-card,
 .filter-regions,
 .filter-search,
 .search-bar,
@@ -130,6 +131,7 @@ header {
   color: var(--dark-gray);
 }
 
+.country-card,
 .filter-regions,
 .filter-search,
 header,
@@ -147,10 +149,12 @@ header,
   font-weight: var(--w4);
 }
 
+.country-card span,
 .dark-mode p {
   font-weight: var(--w6);
 }
 
+.country-card h2,
 .home h1 {
   font-weight: var(--w8);
 }
@@ -162,6 +166,11 @@ header,
   font-size: var(--s12);
 }
 
+.country-card h2 {
+  font-size: var(--s18);
+}
+
+.country-card div p,
 .filter-regions {
   line-height: var(--l16);
 }
@@ -172,10 +181,20 @@ header,
   line-height: var(--l20);
 }
 
+.country-card {
+  line-height: var(--l26);
+}
+
+
+
+
 
 /* 
 5.  Flex
 */
+
+.country-card div,
+.country-container,
 .filter-regions,
 main,
 .countries-container,
@@ -190,6 +209,8 @@ header {
   display: flex;
 }
 
+.country-card div,
+.country-container,
 .filter-regions,
 main,
 .search-wrap {
@@ -210,6 +231,7 @@ header div {
   justify-content: flex-end;
 }
 
+.countries-container,
 .filter-search {
   justify-content: center;
 }
@@ -223,10 +245,12 @@ header {
   align-items: center;
 }
 
+.countries-container,
 header {
   flex-wrap: wrap;
 }
 
+.country-card div,
 .filter-regions,
 .dark-mode div {
   gap: 8px;
@@ -234,6 +258,10 @@ header {
 
 .search-bar div {
   gap: 26px;
+}
+
+.countries-container {
+  gap: 40px;
 }
 
 .filter-search {
@@ -283,6 +311,10 @@ h1,
   height: 48px;
 }
 
+.country-container {
+  width: 264px;
+}
+
 .search-bar input,
 .search-bar div {
   width: 100%;
@@ -295,6 +327,14 @@ h1,
   border-radius: var(--r5);
 }
 
+.country-card {
+  border-radius: 0px 0px 5px 5px;
+}
+
+.flag {
+  border-radius: 5px 5px 0 0;
+}
+
 .search-bar input {
   border: none;
   border-radius: 0 5px 5px 0;
@@ -302,6 +342,15 @@ h1,
 
 header {
   height: 80px;
+}
+
+.hidden {
+  display: none;
+}
+
+.flag {
+  height: 160px;
+  object-fit: cover;
 }
 
 
@@ -328,7 +377,11 @@ header {
 }
 
 .countries-container {
-  padding: 0 40px;
+  padding: 32px 40px 0 40px;
+}
+
+.country-card {
+  padding: 24px 24px 46px 24px;
 }
 
 /*
@@ -337,6 +390,10 @@ header {
 
 .search-bar {
   margin-bottom: 40px;
+}
+
+.country-card h2 {
+  margin-bottom: 16px;
 }
 
 
@@ -395,5 +452,10 @@ header {
 
   .filter-regions {
     top: 64%;
+  }
+
+  .countries-container {
+    gap: 75px;
+    padding: 48px 20px 0 20px;
   }
 }
