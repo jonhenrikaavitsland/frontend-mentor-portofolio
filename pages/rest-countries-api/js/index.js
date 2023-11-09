@@ -8,7 +8,7 @@ import { createCountryCard } from "./render/renderCountriesCard.js";
 // Renders the html for the filter by region menu
 createHtmlFilterRegions(regions, parentContainer);
 
-// exports for later use
+// export for later use
 export const filterRegions = document.querySelector(".filter-regions");
 
 // on click it will open or close the filer by region menu
