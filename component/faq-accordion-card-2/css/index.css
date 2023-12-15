@@ -1,0 +1,227 @@
+/* Table of Contents
+
+1.  Custom Variables
+2.  Global Styles
+
+
+*/
+
+
+/* 
+1.  Custom Variables
+*/
+
+:root {
+  /* Colors */
+  --white: #fff;
+  --black: #000;
+  --light-pink: #F8EEFF;
+  --dark-purple: #301534;
+  --pink: #AD28EB;
+  --pale-purple: #8B6990;
+
+  /* Typography */
+  --work-sans: 'Work Sans', sans-serif;
+
+  --w4: 400;
+  --w6: 600;
+  --w7: 700;
+
+  --s14: 0.875rem;
+  --s16: 1rem;
+  --s18: 1.125rem;
+  --s32: 2rem;
+  --s56: 3.5rem;
+
+  --lh150: 150%;
+
+  /* border */
+  --r8: 8px;
+  --r16: 16px;
+}
+
+
+/* 
+2.  Global Styles
+*/
+
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2 {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-pink);
+  color: var(--dark-purple);
+  font-family: var(--work-sans);
+  font-weight: var(--w6);
+  font-size: var(--s16);
+  min-height: 100vh;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  flex: 1;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+
+/* 
+3.  Typography
+*/
+
+.header-wrap h1 {
+  font-size: var(--s32);
+  font-weight: var(--w7);
+}
+
+.answer-wrap {
+  font-weight: var(--w4);
+  font-size: var(--s14);
+  line-height: var(--lh150);
+}
+
+/* 
+4.  Color
+*/
+
+.faq-container {
+  background-color: var(--white);
+}
+
+.top-container {
+  background-color: var(--dark-purple);
+}
+
+.answer-wrap p {
+  color: var(--pale-purple);
+}
+
+.faq-container {
+  box-shadow: 0px 32px 56px 0px rgba(80, 0, 118, 0.10);
+}
+
+
+/* 
+5.  Flex
+*/
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.question-wrap,
+.header-wrap {
+  align-items: center;
+}
+
+.faq-main {
+  justify-content: center;
+}
+
+.question-wrap section {
+  flex: 1;
+}
+
+.question-wrap,
+.qa-wrap,
+.faq-container,
+.header-wrap {
+  gap: 24px;
+}
+
+
+/* 
+6.  Positioning
+*/
+
+.faq-main {
+  position: relative;
+}
+
+.faq-container {
+  position: absolute;
+  z-index: 10;
+  top: -86px;
+}
+
+
+/* 
+7.  Layout
+*/
+
+.hidden {
+  display: none;
+}
+
+.faq-header {
+  text-transform: uppercase;
+}
+
+.header-wrap img {
+  height: 24px;
+  width: 24px;
+}
+
+.top-container {
+  height: 320px;
+}
+
+.faq-container {
+  border-radius: var(--r8);
+  max-width: 600px;
+}
+
+.top-container {
+  background-image: url("./../images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: right -100px;
+  background-position-y: top -10px;
+}
+
+/* 
+8.  Padding
+*/
+
+.faq-container {
+  padding: 24px;
+}
+
+
+/* 
+9.  Margin
+*/
+
+.faq-container {
+  margin: 0 24px;
+}
