@@ -1,0 +1,276 @@
+/* 
+Table of Contents:
+
+1.  Custom Variables
+2.  Global Styles
+3.  Typography
+4.  Color
+5.  Grid
+6.  Flex
+7.  Layout
+8.  Position
+9.  Padding
+10. Flex
+11. @Media
+*/
+
+
+/* 
+1.  Custom Variables
+*/
+
+:root {
+  /* color */
+  --yellow: #F4D04E;
+  --pure-white: #FFF;
+  --black: #111;
+  --grey: #7F7F7F;
+
+  /* Typography */
+  --ff-figtree:"Figtree SemiBold", sans-serif;
+  --ff-figtree-extra: "Figtree ExtraBold", sans-serif;
+
+  /* font-sizes */
+  --s12: 0.75rem;
+  --s14: 0.875rem;
+  --s16: 1rem;
+  --s20: 1.25rem;
+  --s24: 1.5rem;
+
+  /* font-weights */
+  --w6: 600; 
+  --w8: 800;
+
+  /* line-height */
+  --l150: 1.5;
+
+  /* border-radius */
+  --r4: 4px;
+  --r8: 8px;
+  --r10: 10px;
+  --r20: 20px;
+}
+
+
+/* 
+2.  Global Styles
+*/
+@font-face {
+  font-family: "Figtree ExtraBold";
+  src: url("/component/blog-preview-card/assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Figtree SemiBold";
+  src: url("/component/blog-preview-card/assets/fonts/static/Figtree-SemiBold.ttf") format("truetype");
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--ff-figtree);
+  font-size: var(--s14);
+  line-height: var(--l150);
+  font-weight: var(--w6);
+  height: 100vh;
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+/* 
+3.  Typography
+*/
+
+.upper {
+  text-transform: uppercase;
+}
+
+.published,
+.category-wrap h2 {
+  font-size: var(--s12);
+}
+
+.lower-half section h3 {
+  font-size: var(--s20);
+}
+
+.bottom-container p,
+.lower-half section h3,
+.category-wrap h2 {
+  font-family: var(--ff-figtree-extra);
+  font-weight: var(--w8);
+}
+
+/* 
+4.  Color
+*/
+
+.text {
+  color: var(--grey);
+}
+
+.category-wrap {
+  background-color: var(--yellow);
+}
+
+.card-wrap {
+  background-color: var(--pure-white);
+  border-color: var(--black);
+  box-shadow: 8px 8px 0px 0px #000; 
+}
+
+/* 
+5.  Grid
+*/
+
+
+/* 
+6.  Flex
+*/
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.bottom-container,
+.category-wrap,
+.canvas {
+  align-items: center;
+}
+
+.category-wrap,
+.canvas {
+  justify-content: center;
+}
+
+.canvas {
+  flex: 1;
+}
+
+.bottom-container,
+.lower-half section {
+  gap: 12px;
+}
+
+.card-wrap {
+  gap: 24px;
+}
+
+
+/* 
+7.  Layout
+*/
+
+.bottom-container img {
+  height: 32px;
+  width: 32px;
+}
+
+.category-wrap {
+  width: 73px;
+  height: 26px;
+  border-radius: var(--r4);
+}
+
+.card-wrap {
+  border-radius: var(--r20);
+  border: 1px solid;
+  max-width: 384px;
+}
+
+.card-wrap img {
+  border-radius: var(--r10);
+}
+
+
+/* 
+8.  Position
+*/
+
+
+/* 
+9.  Padding
+*/
+
+.card-wrap {
+  padding: 24px; 
+}
+
+.bottom-container {
+  padding-top: 24px;
+}
+
+
+/* 
+10. Margin
+*/
+
+.card-wrap {
+  margin: 0 24px;
+}
+
+
+/* 
+11. @Media
+*/
+
+@media (min-width: 450px) {
+  .category-wrap {
+    width: 82px;
+    height: 29px;
+  }
+
+  .published,
+  .category-wrap h2 {
+    font-size: var(--s14);
+  }
+
+  .text {
+    font-size: var(--s16);
+  }
+
+  .lower-half section h3 {
+    font-size: var(--s24);
+  }
+
+  .lower-half section h3:hover {
+    color: var(--yellow);
+    transition: 500ms;
+  }
+
+  .card-wrap {
+    box-shadow: 16px 16px 0px 0px #000;
+  }
+}
