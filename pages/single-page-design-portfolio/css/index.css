@@ -45,6 +45,7 @@ Table of contents
   --s16: 1rem;
   --s18: 1.125rem;
   --s24: 1.5rem;
+  --s26: 1.625rem;
   --s32: 2rem;
   --s36: 2.25rem;
   --s40: 2.5rem;
@@ -61,6 +62,7 @@ Table of contents
   --r8: 8px;
   --r10: 10px;
   --r28: 28px;
+  --r50: 50%;
 }
 
 
@@ -101,36 +103,61 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
 }
 
 /* 
 3.  Typography
 */
 
+.booking-wrap button,
+.bio-wrap button,
 .link-header-footer {
   font-size: var(--s14);
 }
 
+.slider-wrap h2,
 .skills-container section h2 {
   font-size: var(--s24);
+}
+
+.booking-wrap h2,
+.bio-wrap h2 {
+  font-size: var(--s26);
 }
 
 .intro h1 {
   font-size: var(--s36);
 }
 
+.booking-wrap button,
+.booking-wrap h2,
+.slider-wrap h2,
+.bio-wrap button,
+.bio-wrap h2,
 .skills-container section h2,
 .intro h1,
 .link-header-footer {
   font-weight: var(--w7);
 }
 
+.booking-wrap p,
+.bio-wrap section p,
 .intro p {
   line-height: var(--l162);
 }
 
+.booking-wrap button,
+.bio-wrap button,
 .link-header-footer {
   line-height: var(--l200);
+}
+
+.booking-wrap,
+.slider-wrap h2,
+.bio-wrap section,
+.intro {
+  text-align: center;
 }
 
 
@@ -138,31 +165,36 @@ body {
 4.  Color
 */
 
-.intro {
-  text-align: center;
-}
-
 .skills-container h2 {
   color: var(--white);
 }
 
+.slider-wrap h2,
+.bio-wrap h2,
 .intro h1 {
   color: var(--black);
 }
 
+.booking-wrap button,
+.booking-wrap,
+.bio-wrap button, 
 .link-header-footer {
   color: var(--light-cream);
 }
 
+.booking-wrap,
+.arrow-wrap button,
 .link-header-footer {
   background-color: var(--black);
 }
 
+.arrow-wrap button:hover,
 .skill-graphic,
 .link-header-footer:hover {
   background-color: var(--galactic-blue);
 }
 
+.bio-wrap button:hover,
 .skill-ui {
   background-color: var(--summer-yellow);
 }
@@ -171,6 +203,8 @@ body {
   background-color: var(--faded-red)  ;
 }
 
+.booking-wrap button,
+.bio-wrap button,
 .skill-illustration {
   background-color: var(--light-red);
 }
@@ -183,6 +217,8 @@ body {
   background-color: var(--purple);
 }
 
+.arrow-wrap button:hover, 
+.bio-wrap button:hover,
 .link-header-footer:hover {
   transition: 500ms; 
 }
@@ -218,6 +254,7 @@ body {
   flex-direction: column;
 }
 
+.bio-wrap,
 .intro,
 .home-footer,
 .home-header {
@@ -226,6 +263,10 @@ body {
 
 .skills-container section {
   align-items: flex-end;
+}
+
+.arrow-wrap {
+  justify-content: center;
 }
 
 .home-footer div, 
@@ -238,8 +279,19 @@ body {
   flex: 1;
 } 
 
+.slider ul {
+  gap: 15px;
+}
+
 .intro {
   gap: 16px;
+}
+
+.booking-wrap section,
+.booking-wrap,
+.arrow-wrap,
+.bio-wrap section {
+  gap: 24px;
 }
 
 
@@ -247,6 +299,9 @@ body {
 7.  Layout
 */
 
+.booking-wrap button,
+.arrow-wrap button,
+.bio-wrap button,  
 .skills-container section,
 .link-header-footer {
   cursor:pointer;
@@ -266,6 +321,14 @@ body {
   height: 182px;
 }
 
+.bio-wrap img {
+  height: 286px;
+}
+
+.slider-wrap {
+  height: 338px;
+}
+
 .skill-graphic {
   height: 364px;
 }
@@ -274,10 +337,23 @@ body {
   width: 285px;
 }
 
+.slider li img {
+  height: 180px;
+  width: 270px;
+}
+
+.slider {
+  width: 1426px;
+}
+
+.booking-wrap button,
+.arrow-wrap button,
+.bio-wrap button,
 .link-header-footer {
   border: 0;
 }
 
+.slider img,
 .skill-motion,
 .skill-photo,
 .skill-illustration,
@@ -287,8 +363,22 @@ body {
   border-radius: var(--r8);
 }
 
+.booking-wrap {
+  border-radius: var(--r10);
+}
+
+.booking-wrap button,
+.bio-wrap button,
 .link-header-footer{
   border-radius: var(--r28);
+}
+
+.arrow-wrap button {
+  border-radius: var(--r50);
+}
+
+.slider li {
+  list-style: none;
 }
 
 
@@ -296,11 +386,31 @@ body {
 8.  Position
 */
 
+.slider-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  position: absolute;
+}
+
+.slider {
+  right: -525px;
+}
+
+
 
 /* 
 9.  Padding
 */
 
+.slider ul {
+  padding: 0;
+}
+
+.booking-wrap button,
+.bio-wrap button,
 .link-header-footer {
   padding: 8px 28px 8px 27px;
 }
@@ -312,14 +422,50 @@ header {
   padding: 16px;
 }
 
+.slider {
+  padding: 0 16px;
+}
+
 .skills-container section {
   padding: 0 0 24px 24px;
+}
+
+.bio-wrap {
+  padding: 84px 16px 60px 16px;
+}
+
+.bio-wrap div:first-child {
+  padding: 0 0 40px 0 ;
+}
+
+.arrow-wrap button {
+  padding: 20px;
+}
+
+.slider-wrap h2 {
+  padding-bottom: 32px;
+}
+
+.booking-wrap {
+  padding: 49px 24px 48px 24px;
 }
 
 
 /* 
 10. Margin
 */
+
+.slider ul {
+  margin: 0;
+}
+
+.arrow-wrap {
+  margin-top: 212px;
+}
+
+.booking-wrap {
+  margin: 100px 16px 24px 16px;
+}
 
 
 /* 
@@ -379,24 +525,45 @@ header {
   3.  Typography
   */
 
+  .booking-wrap button,
+  .bio-wrap button,
   .link-header-footer {
     font-size: var(--s16);
   }
 
+  .booking-wrap p,
+  .bio-wrap section p,
   .intro p {
     font-size: var(--s18);
+  }
+
+  .booking-wrap h2,
+  .slider-wrap h2,
+  .bio-wrap h2 {
+    font-size: var(--s32);
   }
 
   .intro h1 {
     font-size: var(--s44);
   }
 
+  .booking-wrap p,
+  .bio-wrap section p,
   .intro p {
     line-height: var(--l155);
   }
 
+  .booking-wrap button,
+  .bio-wrap button,
   .link-header-footer {
     line-height: var(--l175);
+  }
+
+  .slider-wrap h2,
+  .intro p,
+  .bio-wrap section p,
+  .bio-wrap section h2  {
+    font-feature-settings: 'clig' off, 'liga' off;
   }
 
   /* 
@@ -434,36 +601,124 @@ header {
   6.  Flex
   */
 
+  .bio-wrap {
+    flex-direction: row;
+  }
+
+  .bio-wrap div:first-child {
+    justify-content: center;
+  }
+
+  .bio-wrap section,
+  .bio-wrap div:first-child {
+    flex: 1;
+  }
+
+  .booking-wrap,
+  .booking-wrap section {
+    gap: 26px;
+  }
+
 
   /* 
   7.  Layout
   */
 
+  .bio-wrap section {
+    text-align: start;
+  }
+
   .logo {
     height: auto;
+  }
+
+  .bio-wrap img {
+    height: 364px;
+  }
+
+  .slider-wrap {
+    height: 576px;
   }
 
   .intro p {
     width: 573px;
   }
 
-  .link-header-footer {
-    padding: 14px 45px;
+  .slider {
+    width: 2884px;
+  }
+
+  .slider li img {
+    height: 360px;
+    width: 540px;
   }
 
   /* 
   8.  Position
   */
 
+  .bio-wrap div:first-child {
+    position: relative;
+  }
+
+  .bio-wrap img {
+    position: relative;
+  }
+
+  .bio-wrap img {
+    right: 60px;
+  }
+
+  .slider {
+    right: -1100px;
+  }
+
 
   /* 
   9.  Padding
   */
 
+  .booking-wrap button,
+  .link-header-footer,
+  .bio-wrap button {
+  padding: 14px 45px;
+}
+
+  header {
+    padding: 34px 40px 32px 40px;
+  }
+
+  .skills-container,
+  .intro {
+    padding: 32px 40px 32px 40px;
+  }
+
+  .bio-wrap {
+    padding: 88px 40px 120px  40px;
+  }
+
+  .bio-wrap div:first-child {
+    padding: 0 ;
+  }
+
+  footer {
+    padding: 56px 40px 60px 40px;
+  }
+
+  .slider-wrap h2 {
+    padding-bottom: 56px;
+  }
+
 
   /* 
   10. Margin
   */
+
+  .arrow-wrap {
+    margin-top: 400px;
+  }
+
+
 }
 
 
@@ -474,8 +729,20 @@ header {
   3.  Typography
   */
 
+  .bio-wrap h2 {
+    font-size: var(--s40);
+  }
+
   .intro h1 {
     font-size: var(--s56);
+  }
+
+  .intro h1 {
+    font-feature-settings: 'clig' off, 'liga' off; 
+  }
+
+  .booking-wrap section {
+    text-align: start ;
   }
 
 
@@ -513,17 +780,38 @@ header {
   6.  Flex
   */
 
+  .booking-wrap {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .booking-wrap div {
+    justify-content: flex-end;
+  }
+
 
   /* 
   7.  Layout
   */
 
+  .booking-wrap p {
+    width: 540px;
+  }
+
   .intro p {
     width: 730px;
   }
 
+  .booking-wrap div {
+    width: 100%;
+  }
+
   .skill-motion {
     height: auto;
+  }
+
+  .bio-wrap img {
+    height: 445px;
   }
 
 
@@ -531,13 +819,40 @@ header {
   8.  Position
   */
 
+  .slider {
+    right: -750px;
+  }
 
   /* 
   9.  Padding
   */
 
+  header {
+    padding: 34px 164px;
+  }
+
+  .skills-container {
+    padding: 48px 165px;
+  }
+
+  .bio-wrap {
+    padding: 48px 165px 88px 165px ;
+  }
+
+  .booking-wrap {
+    padding: 81px 95px 80px 65px   ;
+  }
+
+  footer {
+    padding: 56px 164px 64px 165px;
+  }
+
 
   /* 
   10. Margin
   */
+
+  .booking-wrap {
+    margin: 100px 165px 0 165px;
+  }  
 }
