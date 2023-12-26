@@ -1,0 +1,334 @@
+/* 
+Table of contents
+
+1.  Custom Variables
+2.  Global Styles
+3.  Typography
+4.  Color
+5.  Grid
+6.  Flex
+7.  Layout
+8.  Position
+9.  Padding
+10. Margin
+11. Background
+12. @media
+*/
+
+
+/* 
+1.  Custom Variables
+*/
+
+:root {
+  /* Primary colors */
+  --red: #F65552;
+  --blue: #0A327B;
+
+  /* Neutral Colors */
+  --white: #FFF;
+  --snow: #F7FAFD;
+  --very-light-grey-blue: #DDE7EE;
+  --grey-blue: #939CAD;
+  --dark-grey-blue: #5E6778;
+  --very-dark-grey-blue: #1C202B;
+  --black: #0000000C;
+
+  /* typography */
+
+  --jakarta: 'Plus Jakarta Sans', sans-serif;
+
+  /* font weights */
+  --w5: 500;
+  --w7: 700;
+  --w8: 800;
+
+  /* font sizes */
+  --s14: 0.875rem;
+  --s16: 1rem;
+  --s20: 1.25rem;
+  --s24: 1.5rem;
+
+  /* Border Radius */
+  --r5: 5px;
+  --r6: 6px;
+  --r8: 8px;
+}
+
+
+/* 
+2.  Global Styles
+*/
+
+.attribution { 
+  font-size: 11px; text-align: center; 
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%); 
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--dark-grey-blue);
+  margin: 0 auto;
+  padding: 24px 16px;
+  font-family: var(--jakarta);
+  font-weight: var(--w5);
+  font-size: var(--s14);
+  line-height: 1.25;
+  height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Loader animation*/
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-top: 100px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: var(--very-light-grey-blue);
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+
+
+/* 
+3.  Typography
+*/
+
+.unread-number {
+  font-size: var(--s16);
+}
+
+.notifications-heading-wrap h1 {
+  font-size: var(--s20);
+}
+
+.notification-target {
+  font-weight: var(--w7);
+}
+
+.notification-name,
+.notifications-heading-wrap h1,
+.unread-number {
+  font-weight: var(--w8);
+}
+
+
+
+
+/* 
+4.  Color
+*/
+
+.unread-number {
+  background-color: var(--blue);
+}
+
+.all-read-btn-wrap button {
+  background-color: transparent;
+}
+
+.all-read-btn-wrap button {
+  color: var(--dark-grey-blue);
+}
+
+.unread-number {
+  color: var(--white);
+}
+
+.notification-name,
+.notifications-heading-wrap h1 {
+  color: var(--very-dark-grey-blue);
+}
+
+.notification-time {
+  color: var(--grey-blue);
+}
+
+
+/* 
+5.  Grid
+*/
+
+.notification-wrap {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-row: min-content min-content;
+}
+
+.preview-message-wrap {
+  grid-column: 2 / -1;
+}
+
+
+/* 
+6.  Flex
+*/
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+
+.unread-number {
+  justify-content: center;
+}
+
+.notification-wrap section h2,
+.notifications-container,
+header,
+.notifications-heading-wrap,
+.unread-number {
+  align-items: center;
+}
+
+.notifications-heading-wrap {
+  flex: 1;
+}
+
+.notifications-heading-wrap {
+  gap: 9px;
+}
+
+.notifications-container {
+  gap: 10px;
+}
+
+/* 
+7.  Layout
+*/
+
+.all-read-btn-wrap button {
+  cursor: pointer;
+}
+
+.unread-number {
+  width: 32px;
+  height: 25px;
+  border-radius: var(--r6);
+}
+
+.notification-wrap {
+  width: 100%;
+}
+
+.notifications-image img {
+  height: 39px;
+}
+
+.all-read-btn-wrap button {
+  border: none;
+}
+
+.notification-wrap {
+  border-radius: var(--r8);
+}
+
+
+/* 
+8.  Position
+*/
+
+
+/* 
+9.  Padding
+*/
+
+.all-read-btn-wrap button {
+  padding: 12px 0;
+}
+
+.notifications-image {
+  padding-right: 13px;
+}
+
+.preview-message-wrap,
+.notification-wrap {
+  padding: 16px;
+}
+
+.notification-wrap section,
+header {
+  padding-bottom: 16px;
+}
+
+/* 
+10. Margin
+*/
+
+
+/* 
+11. Background
+*/
+
+
+/* 
+12. @media
+*/
