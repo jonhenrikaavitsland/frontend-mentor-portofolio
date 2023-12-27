@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="challenge by frontendmentor.io">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <script type="module" src="./js/index.js"></script>
+</head>
+<body>
+  <main class="flex flex-col">
+    <div class="logo-wrap flex">
+      <img src="./images/logo.svg" alt="tip calculator">
+    </div>
+    <div class="app-wrap flex flex-col">
+      <div class="input-wrap flex flex-col">
+        <section class="bill-wrap flex flex-col">
+          <h1>Bill</h1>
+          <div class="bill-input-wrap flex">
+            <div class="dollar-wrap flex flex-col">
+              <img src="./images/icon-dollar.svg" alt="dollar">
+            </div>
+            <label for="bill-amount" class="visually-hidden">Bill amount in dollar</label>
+            <input type="text" id="bill-amount" name="bill-amount" placeholder="0">
+          </div>
+        </section>
+        <section class="tip-wrap flex flex-col">
+          <h2>Select Tip %</h2>
+          <div class="grid tip-btn-container">
+            <div>
+              <button>5%</button>
+            </div>
+            <div>
+              <button>10%</button>
+            </div>
+            <div>
+              <button>15%</button>
+            </div>
+            <div>
+              <button>25%</button>
+            </div>
+            <div>
+              <button>50%</button>
+            </div>
+            <div class="tip-input-wrap">
+              <label for="custom tip" class="visually-hidden">custom tip</label>
+              <input type="text" name="custom-tip" id="custom-tip" placeholder="Custom">
+            </div>
+          </div>
+        </section>
+        <section class="number-people-wrap flex flex-col">
+          <h2>Number of People</h2>
+          <div class="people-input-wrap flex">
+            <div class="people-img-wrap flex flex-col">
+              <img src="./images/icon-person.svg" alt="persons">
+            </div>
+            <label for="persons" class="visually-hidden">Number of people</label>
+            <input type="text" name="persons" id="persons" placeholder="0">
+          </div>
+        </section>
+      </div>
+      <div class="result-wrap flex flex-col">
+        <div class="tip-amount-wrap flex">
+          <section >
+            <h3>Tip Amount</h3>
+            <span>/ person</span>
+          </section>
+          <span class="result-tip-pp flex">$0.00</span>
+        </div> 
+        <div class="total-wrap flex">
+          <section>
+            <h3>Total</h3>
+            <span>/ person</span>
+          </section>
+          <span class="result-tip-total flex">$0.00</span>
+        </div>
+        <button class="reset-btn">Reset</button>
+      </div>
+    </div>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</body>
+</html>

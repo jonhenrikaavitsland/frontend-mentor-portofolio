@@ -1,0 +1,496 @@
+/* 
+Table of contents
+
+1.  Custom Variables
+2.  Global Styles
+3.  Typography
+4.  Color
+5.  Grid
+6.  Flex
+7.  Layout
+8.  Position
+9.  Padding
+10. Margin
+11. Background
+12. @media
+*/
+
+
+/* 
+1.  Custom Variables
+*/
+
+:root {
+
+  /* Colors */
+  --bg-cyan: #C5E4E7;
+  --white-neutral: #FFF;
+  --input-bg: #F3F9FA;
+  --strong-cyan: #26C2AE;
+  --very-dark-cyan: #00474B;
+  --inactive-btn: #0D686D;
+  --dark-text-cyan: #7F9D9F;
+  --light-text-cyan: #5E7A7D;
+  --placeholder-cyan: #547878;
+  --verification-orange: #E17052;
+  --hover-cyan: #9FE8DF;
+
+  /* Font Family */
+  --space-mono: 'Space Mono', monospace;
+
+  /* Font Size */
+  --s13: 0.8125rem;
+  --s16: 1rem;
+  --s20: 1.25rem;
+  --s24: 1.5rem;
+  --s32: 2rem;
+  --s48: 3rem;
+
+  /* Font Weight */
+  --w7: 700;
+
+  /* Border Radius */
+
+  --r5: 5px;
+  --r15: 15px;
+  --r25top-left: 25px 25px 0px 0px;
+}
+
+
+/* 
+2.  Global Styles
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+span,
+input,
+button {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-cyan);
+  color: var(--light-text-cyan);
+  margin: 0 auto;
+  height: 100vh;
+  font-family: var(--space-mono);
+  font-size: var(--s16);
+  font-weight: var(--w7);
+  line-height: 1.5;
+}
+
+main {
+  flex: 1;
+}
+
+.attribution { 
+  font-size: 11px; text-align: center; 
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* The following code is hiding the content for regular users but keeping it accessible. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  background-color: transparent;
+  color: transparent;
+}
+
+
+/* 
+3.  Typography
+*/
+
+.reset-btn {
+  text-transform: uppercase;
+}
+
+.tip-amount-wrap section span,
+.total-wrap section span {
+  font-size: var(--s13);
+}
+
+.people-input-wrap input,
+.bill-input-wrap input,
+.tip-btn-container input,
+.tip-btn-container button {
+  font-size: var(--s24);
+}
+
+.result-tip-pp,
+.result-tip-total {
+  font-size: var(--s32);
+  letter-spacing: -0.667px;
+}
+
+/* 
+4.  Color
+*/
+
+.reset-btn {
+  color: var(--very-dark-cyan);
+}
+
+.result-tip-pp,
+.result-tip-total {
+  color: var(--strong-cyan) ;
+}
+
+.tip-amount-wrap h3,
+.total-wrap h3,
+.tip-btn-container button {
+  color: var(--white-neutral);
+}
+
+::placeholder {
+  color: var(--placeholder-cyan);
+}
+
+.app-wrap {
+  background-color: var(--white-neutral);
+}
+
+.people-input-wrap input,
+.people-input-wrap,
+.people-img-wrap,
+.tip-btn-container input,
+.bill-input-wrap,
+.dollar-wrap,
+.bill-input-wrap input {
+  background-color: var(--input-bg);
+}
+
+.result-wrap,
+.tip-btn-container button {
+  background-color: var(--very-dark-cyan);
+}
+
+.reset-btn {
+  background-color: var(--inactive-btn);
+}
+
+
+/* 
+5.  Grid
+*/
+
+.grid {
+  display: grid;
+}
+
+.tip-btn-container {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/* 
+6.  Flex
+*/
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.people-img-wrap,
+.dollar-wrap,
+.logo-wrap {
+  justify-content: center;
+}
+
+.result-tip-total,
+.result-tip-pp {
+  justify-content: flex-end;
+}
+
+.total-wrap,
+.tip-amount-wrap {
+  align-items: center;
+}
+
+.result-tip-pp,
+.result-tip-total,
+.bill-input-wrap input {
+  flex: 1;
+}
+
+.number-people-wrap,
+.bill-wrap {
+  gap: 6px;
+}
+
+.tip-btn-container,
+.tip-wrap {
+  gap: 16px;
+}
+
+.result-wrap {
+  gap: 20px ;
+}
+
+.app-wrap,
+.input-wrap {
+  gap: 32px;
+}
+
+
+/* 
+7.  Layout
+*/
+
+.people-input-wrap input,
+.tip-btn-container button,
+.tip-btn-container input,
+.bill-input-wrap input {
+  cursor: pointer;
+}
+
+.reset-btn,
+.people-img-wrap,
+.tip-btn-container button,
+.tip-btn-container input,
+.tip-btn-container div,
+.bill-input-wrap input,
+.dollar-wrap,
+.bill-input-wrap {
+  height: 48px;
+} 
+
+.people-input-wrap input,
+.tip-btn-container button,
+.tip-btn-container div,
+.tip-btn-container input {
+  width: 100%;
+}
+
+.dollar-wrap,
+.people-img-wrap {
+  width: 50px;
+}
+
+.reset-btn,
+.people-input-wrap input,
+.tip-btn-container input,
+.tip-btn-container button,
+.bill-input-wrap input {
+  border: 0;
+}
+
+.people-input-wrap input,
+.bill-input-wrap input {
+  border-radius: 0 5px 5px 0;
+}
+
+.people-img-wrap,
+.dollar-wrap {
+  border-radius: 5px 0 0 5px;
+}
+
+.reset-btn,
+.people-input-wrap,
+.tip-btn-container input,
+.tip-btn-container button,
+.bill-input-wrap {
+  border-radius: var(--r5);
+}
+
+.result-wrap {
+  border-radius: var(--r15);
+}
+
+.app-wrap {
+  border-radius: var(--r25top-left);
+}
+
+
+
+
+
+/* 
+8.  Position
+*/
+.people-img-wrap,
+.dollar-wrap,
+.tip-input-wrap,
+.people-input-wrap,
+.bill-input-wrap {
+  position: relative;
+}
+
+#custom-tip,
+#persons,
+#bill-amount::placeholder {
+  text-align: right;
+  direction: rtl;
+}
+
+.people-img-wrap img,
+.dollar-wrap img {
+  position: absolute;
+  top: center;
+  left: 20px; 
+}
+
+/* 
+9.  Padding
+*/
+
+.result-wrap {
+  padding: 37px 24px 24px 24px;
+}
+
+.app-wrap {
+  padding: 32px 24px;
+}
+
+.logo-wrap {
+  padding: 50px 0 41px 0;
+}
+
+.people-input-wrap input,
+.tip-btn-container input,
+.bill-input-wrap input {
+  padding-right: 17px;
+}
+
+/* 
+10. Margin
+*/
+
+.reset-btn {
+  margin-top: 12px;
+}
+
+
+
+/* 
+11. Background
+*/
+
+
+/* 
+12. @media
+*/
+
+@media (min-width: 920px) {
+
+  /* 
+  3.  Typography
+  */
+
+
+  /* 
+  4.  Color
+  */
+
+
+  /* 
+  5.  Grid
+  */
+
+
+  /* 
+  6.  Flex
+  */
+
+  .logo-wrap {
+    align-items: center;
+  }
+
+  main {
+    align-items: center;
+  }
+
+  .app-wrap {
+    flex-direction: row;
+  }
+
+  .input-wrap,
+  .result-wrap {
+    flex: 1;
+  }
+
+  /* 
+  7.  Layout
+  */
+
+  .app-wrap {
+    max-width: 920px;
+  }
+
+  .logo-wrap {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo-wrap img {
+    max-width: 87px;
+    max-height: 53px;
+  }
+
+  .app-wrap {
+    border-radius: 25px;
+  }
+
+
+
+  /* 
+  8.  Position
+  */
+
+
+  /* 
+  9.  Padding
+  */
+
+  main {
+    padding: 0 0 133px 0;
+  }
+
+
+  /* 
+  10. Margin
+  */
+}
+
+@media (min-width: 1440px) {
+  main {
+    align-items: flex-end;
+    padding: 0 100px 133px 0;
+  }
+
+}
