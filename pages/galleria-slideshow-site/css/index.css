@@ -1,0 +1,182 @@
+/* 
+Table of contents
+
+1.  Custom Variables
+2.  Global Styles
+3.  Typography
+4.  Color
+5.  Grid
+6.  Flex
+7.  Layout
+8.  Position
+9.  Padding
+10. Margin
+11. Background
+12. @media
+*/
+
+
+/* 
+1.  Custom Variables
+*/
+
+:root {
+  /* Colors */
+
+  --white: #fff;
+  --black: #000;
+  --grey-600: #7D7D7D;
+  --grey-400: #D8D8D8;
+  --grey-200: #E5E5E5;
+  --grey-100: #F3F3F3;
+  --linear: #00000000, #000000D7;
+
+  --font1: 'Libre Baskerville', serif;
+}
+
+
+/* 
+2.  Global Styles
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+button {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font1);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  background-color: var(--white);
+  color: var(--grey-600);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/* 
+3.  Typography
+*/
+
+header button {
+  text-transform: uppercase;
+  font-family: var(--font1);
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 1.929px;
+}
+
+
+/* 
+4.  Color
+*/
+
+header button {
+  background-color: transparent;
+  color: var(--grey-600);
+}
+
+
+/* 
+5.  Grid
+*/
+
+.home {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-rows: masonry;
+}
+
+
+/* 
+6.  Flex
+*/
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+header {
+  gap: 85px;
+  justify-content: center;
+  align-items: center ;
+}
+
+
+/* 
+7.  Layout
+*/
+
+header button {
+  border: 0;
+  cursor: pointer;
+}
+
+header img {
+  height: 32px;
+}
+
+header {
+  border-bottom: 1px solid var(--grey-200);
+}
+
+/* 
+8.  Position
+*/
+
+
+/* 
+9.  Padding
+*/
+
+header {
+  padding: 24px 0 23px 0;
+}
+
+header button {
+  padding: 10px 0;
+}
+
+main {
+  padding: 23px 0;
+}
+
+
+/* 
+10. Margin
+*/
+
+
+/* 
+11. Background
+*/
+
+
+/* 
+12. @media
+*/
