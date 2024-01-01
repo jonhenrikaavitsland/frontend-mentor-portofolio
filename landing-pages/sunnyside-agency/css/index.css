@@ -1,0 +1,209 @@
+/* 
+Table of contents
+
+1.  Custom Variables
+2.  Global Styles
+3.  Typography
+4.  Color
+5.  Grid
+6.  Flex
+7.  Layout
+8.  Position
+9.  Padding
+10. Margin
+11. Background
+12. @media
+*/
+
+
+/* 
+1.  Custom Variables
+*/
+
+:root {
+  /* Colors */
+  --white-cream-bg: #FFFCF8;
+  --dark-moderate-cyan: #90D4C6;
+  --dark-desaturated-cyan: #24554A;
+  --dark-blue: #052C3B;
+  --very-dark-desaturated-blue: #24303E;
+  --yellow: #FBD600;
+  --soft-red: #FF5D5D;
+  --very-dark-grayish-blue: #3A4453;
+  --dark-grayish-blue: #48566E;
+  --grayish-blue: #A9B2C9;
+
+  /* Font Family */
+  --family-borlow: 'Barlow', sans-serif;
+  --family-fraunces: 'Fraunces', serif;
+
+  /* Font Weights */
+  --w6: 600;
+  --w7: 700;
+  --w9: 900;
+
+  /* Font Sizes */
+  --s14: 0.875rem;
+  --s15: 0.9375rem;
+  --s16: 1rem;
+  --s18: 1.125rem;
+  --s20: 1.25rem;
+  --s28: 1.75rem;
+  --s32: 2rem;
+  --s40: 2.5rem;
+  --s56: 3.5rem;
+
+  /* Letter Spacing */
+  --space0-100: -0.1px;
+  --space0-107: -0.107px;
+  --space0-114: -0.114px;
+  --space0-129: -0.129px;
+  --space0-143: -0.143px;
+  --space0-200: -0.2px;
+  --space0-229: -0.229px;
+  --space0-286: -0.286px;
+  --space1: 1px;
+  --space4: 4px;
+  --space5: 5px;
+  --space6-250: 6.25px;
+  --space8-750: 8.75px;
+
+  /* Line Height */
+  --l25: 25px;
+  --l27: 27px;
+  --l30: 30px;
+  --l32: 32px;
+
+}
+
+/* 
+2.  Global Styles
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+span,
+a {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--white-cream-bg);
+  color: var(--very-dark-desaturated-blue);
+  margin: 0 auto;
+  font-family: var(--family-borlow);
+  font-size: var(--s18);
+  font-weight: var(--w6);
+}
+
+main {
+  flex: 1;
+}
+
+.attribution {
+  font-size: 11px; 
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+/* 
+3.  Typography
+*/
+
+
+/* 
+4.  Color
+*/
+
+
+/* 
+5.  Grid
+*/
+
+
+/* 
+6.  Flex
+*/
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+
+/* 
+7.  Layout
+*/
+
+.hamburger-wrap img {
+  height: 18px;
+  width: 24px;
+}
+
+
+/* 
+8.  Position
+*/
+
+.home-header {
+  position: relative;
+}
+
+.hamburger-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+/* 
+9.  Padding
+*/
+
+
+/* 
+10. Margin
+*/
+
+
+/* 
+11. Background
+*/
+
+header {
+  background-image: url(/landing-pages/sunnyside-agency/images/mobile/image-header.jpg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-size: cover;
+}
+
+
+/* 
+12. @media
+*/
