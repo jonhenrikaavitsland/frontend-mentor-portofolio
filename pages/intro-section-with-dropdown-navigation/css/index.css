@@ -1,0 +1,229 @@
+/* 
+Table of contents
+
+1.  Custom Variables
+2.  Global Styles
+3.  Typography
+4.  Color
+5.  Grid
+6.  Flex
+7.  Layout
+8.  Position
+9.  Padding
+10. Margin
+11. Background
+12. @media
+*/
+
+
+/* 
+1.  Custom Variables
+*/
+
+:root {
+  /* Colors */
+  --pure-white: #FFF;
+  --almost-white: #FAFAFA;
+  --black: #151515;
+  --medium-gray: #686868;
+  --light-gray: #ADADAD;
+
+  /* Font Family */
+  --f-epilogue: 'Epilogue', sans-serif;
+
+  /* Font Sizes */
+  --s14: 0.875rem;
+  --s16: 1rem;
+  --s18: 1.125rem;
+  --s36: 2.25rem;
+  --s80: 5rem;
+
+  /* Font Weight */
+  --w5: 500;
+  --w7: 700;
+
+  /* line Height */
+  --l16: 16px;
+  --l26: 26px;
+  --l28: 28px;
+  --l42: 42px;
+  --l80: 80px;
+
+  /* Border Radius */
+  --r14: 14px;
+  --r15: 15px;
+
+  /* letter Spacing */
+  --spacing-0222: -0.222px;
+  --spacing-0250: -0.25px
+  --spacing-0500: -0.5px;
+  --spacing-1111: -1.111px;
+
+}
+
+/* 
+2.  Global Styles
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+a {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+a {
+  color: var(--medium-gray);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--pure-white);
+  color: var(--medium-gray);
+  font-family: var(--f-epilogue);
+  font-weight: var(--w5);
+  font-size: var(--s16);
+  margin: 0 auto;
+}
+
+main {
+  flex: 1;
+}
+
+.attribution {
+  font-size: 11px; 
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* 
+3.  Typography
+*/
+
+
+/* 
+4.  Color
+*/
+
+.overlay {
+  background-color: var(--black);
+  opacity: 70%;
+}
+
+
+/* 
+5.  Grid
+*/
+
+
+/* 
+6.  Flex
+*/
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.hamburger-wrap {
+  justify-content: center;
+}
+
+.hamburger-wrap {
+  align-items: center;
+}
+
+/* 
+7.  Layout
+*/
+
+.hidden {
+  display: none;
+}
+
+.hamburger-wrap {
+  cursor: pointer;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+}
+
+.hamburger-wrap {
+  width: 48px;
+  height: 48px;
+}
+
+/* 
+8.  Position
+*/
+
+body,
+header {
+  position: relative;
+}
+
+.hamburger-wrap,
+.overlay {
+  position: absolute;
+}
+
+.overlay {
+  z-index: 10;
+}
+
+.hamburger-wrap {
+  right: 8px;
+  top: 1px;
+}
+
+
+/* 
+9.  Padding
+*/
+
+header {
+  padding: 16px 16px 24px 16px
+}
+
+
+/* 
+10. Margin
+*/
+
+
+/* 
+11. Background
+*/
+
+
+/* 
+12. @media
+*/
